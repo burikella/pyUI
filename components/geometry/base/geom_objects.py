@@ -1111,7 +1111,7 @@ class GeometryTriangle(suit.core.objects.ObjectDepth, GeometryAbstractObject):
             idtf1 = self.pts[0].build_text_idtf()
             idtf2 = self.pts[1].build_text_idtf()
             idtf3 = self.pts[2].build_text_idtf()
-            
+
             if idtf1 is None or idtf2 is None or idtf3 is None:
                 return None
             
@@ -1129,6 +1129,8 @@ class GeometryQuadrangle(suit.core.objects.ObjectDepth, GeometryAbstractObject):
         GeometryAbstractObject.__init__(self)
         
         self.__manualObject = None  # manual object to store and render geometry
+        self._circum = None
+        self._incircle = None
         self.pts = []        # quadrangle vertex points
         self.sides = []         # quadrangle sides
             
@@ -1147,10 +1149,18 @@ class GeometryQuadrangle(suit.core.objects.ObjectDepth, GeometryAbstractObject):
             
         suit.core.objects.ObjectDepth.delete(self)
         GeometryAbstractObject.delete(self)
+
+    def setCircumCircle(self, circle):
+        assert isinstance(circle, GeometryCircle)
+        self._circum = circle
+
+    def setInCircle(self, circle):
+        assert isinstance(circle, GeometryCircle)
+        self._incircle = circle
         
     def _getMaterialName(self):
         """Returns material name based on object state
-        """        
+        """
         return geom_env.material_state_pat % ("triangle_%s" % (state_post[self.getState()]))
     
     def _update(self, _timeSinceLastFrame):
@@ -1193,6 +1203,9 @@ class GeometryQuadrangle(suit.core.objects.ObjectDepth, GeometryAbstractObject):
         for point in self.pts:
             self.__manualObject.position(point.getPosition() - self.position)
             self.__manualObject.normal(0, 0, 1)
+
+        if self._incircle is None:
+            points = self.getInCirclePoints()
         
         self.__manualObject.quad(0, 1, 2, 3)
         
@@ -1328,7 +1341,7 @@ class GeometryQuadrangle(suit.core.objects.ObjectDepth, GeometryAbstractObject):
         assert len(self.sides) == 4
         sides = self.getSides()
         points = [self._getDifferentPoints(sides[0], sides[1]), \
-                  self._getDifferentPoints(sides[2], sides[3])]
+                  self._getDifferentPoints(sides[1], sides[2])]
         d1 = suit.core.objects.ObjectDepth.getDistance(points[0][0].getPosition(), points[0][1].getPosition())
         d2 = suit.core.objects.ObjectDepth.getDistance(points[1][0].getPosition(), points[1][1].getPosition())
         return [d1, d2]
@@ -1361,7 +1374,15 @@ class GeometryQuadrangle(suit.core.objects.ObjectDepth, GeometryAbstractObject):
         sides = self.getSides()
         a = sides[0].getLineLength() + sides[2].getLineLength()
         b = sides[1].getLineLength() + sides[3].getLineLength()
-        return (a - b) <= 0.1
+        return math.fabs(a - b) <= 0.1
+
+    def canHaveCircumCircle(self):
+        sides = self.getSides()
+        diagonals = self.getDiagonals()
+        d = math.fabs(diagonals[0] * diagonals[1])
+        ac = math.fabs(sides[0].getLineLength() * sides[2].getLineLength())
+        bd = math.fabs(sides[1].getLineLength() * sides[3].getLineLength())
+        return math.fabs(d - ac - bd) <= 0.1
 
     def getOppositeSide(self, side):
         for _side in self.sides:
@@ -1394,14 +1415,77 @@ class GeometryQuadrangle(suit.core.objects.ObjectDepth, GeometryAbstractObject):
         c = suit.core.objects.ObjectDepth.getDistance(p1, p3)
         cosY = (a*a + b*b - c*c) / (2*a*b)
         y = math.acos(cosY)
-        x = 2*r*r - 2*r*r*math.cos(math.pi / 2 - y)
-        p2_a_dist = math.sqrt((x*x / (1 - cosY)) / 2)
-        k = a / p2_a_dist
+        x = math.sqrt(2*r*r - 2*r*r*math.cos(math.pi - y))
+        p2_a_dist = math.sqrt((x*x / (1.0 - cosY)) / 2)
+        k = p2_a_dist / a
         np = p2 + (p1 - p2) * k
-        sinA = p2_a_dist / math.fabs(p2[0] - np[0])
-        cosA = math.sqrt(1 - sinA * sinA)
-        center = ogre.Vector3(np[0] + r*sinA, np[1] - r*cosA, 0)
+        sinA = (p2[0] - np[0]) / p2_a_dist
+        cosA = (p2[1] - np[1]) / p2_a_dist
+        if (sinA > 0 and cosA > 0) or (sinA < 0 and cosA < 0):
+            sinA = -sinA
+        else:
+            cosA = -cosA
+        center = ogre.Vector3(np[0] + r*cosA, np[1] + r*sinA, 0)
         return [center, np]
+
+    def getCircumCircleRadius(self):
+        sides = self.getSides()
+        p1, p3 = self._getDifferentPoints(sides[0], sides[1])
+        if p1 is sides[0].getBegin():
+            p2 = sides[0].getEnd()
+        else:
+            p2 = sides[0].getBegin()
+        a = sides[0].getLineLength()
+        b = sides[1].getLineLength()
+        c = suit.core.objects.ObjectDepth.getDistance(p1, p3)
+        p = (a + b + c) / 2
+        S = math.sqrt(p * (p - a) * (p - b) * (p - c))
+        return (a*b*c) / (4*S)
+
+    def getCircumCircleCenter(self):
+        sides = self.getSides()
+        p1, p3 = self._getDifferentPoints(sides[0], sides[1])
+        if p1 is sides[0].getBegin():
+            p2 = sides[0].getEnd()
+        else:
+            p2 = sides[0].getBegin()
+        p1 = p1.getPosition()
+        p2 = p2.getPosition()
+        p3 = p3.getPosition()
+        a = sides[0].getLineLength()
+        b = sides[1].getLineLength()
+        sinA = (p2[0] - p1[0]) / a
+        cosA = (p2[1] - p1[1]) / a
+        if (sinA > 0 and cosA > 0) or (sinA < 0 and cosA < 0):
+            sinA = -sinA
+        else:
+            cosA = -cosA
+        sinB = (p3[0] - p2[0]) / b
+        cosB = (p3[1] - p2[1]) / b
+        if (sinB > 0 and cosB > 0) or (sinB < 0 and cosB < 0):
+            sinB = -sinB
+        else:
+            cosB = -cosB
+        ca = p2 + (p1 - p2) / 2
+        cb = p3 + (p2 - p3) / 2
+        if cosA == 0:
+            kB = sinB / cosB
+            bB = cb[1] - kB * cb[0]
+            cx = ca[0]
+            cy = cx * kB + bB
+        elif cosB == 0:
+            kA = sinA / cosA
+            bA = ca[1] - kA * ca[0]
+            cx = cb[0]
+            cy = cx * kA + bA
+        else:
+            kA = sinA / cosA
+            bA = ca[1] - kA * ca[0]
+            kB = sinB / cosB
+            bB = cb[1] - kB * cb[0]
+            cx = (bB - bA) / (kA - kB)
+            cy = kA * cx + bA
+        return ogre.Vector3(cx, cy, 0)
 
     def getSides(self):
         """Returns list of sides
@@ -1461,8 +1545,8 @@ class GeometryQuadrangle(suit.core.objects.ObjectDepth, GeometryAbstractObject):
             
             return u"%s(%s;%s;%s;%s)" % (u'Четырехугольник', idtf1, idtf2, idtf3, idtf4)
         else:
-            return None  
-    
+            return None
+
 class GeometryAngle(suit.core.objects.ObjectDepth, GeometryAbstractObject):
     """Class that realize geometry angle
     """
@@ -1859,3 +1943,243 @@ class GeometryUnion(suit.core.objects.ObjectDepth):
         @type _obj:    suit.core.objects.ObjectDepth
         """
         pass
+
+
+class GeometryPolygon(suit.core.objects.ObjectDepth, GeometryAbstractObject):
+
+    def __init__(self):
+        """Constructor
+        """
+        suit.core.objects.ObjectDepth.__init__(self)
+        GeometryAbstractObject.__init__(self)
+
+        self.__manualObject = None  # manual object to store and render geometry
+        self.pts = []               # polygon vertex points
+        self.sides = []             # polygon sides
+
+    def __del__(self):
+        suit.core.objects.ObjectDepth.__del__(self)
+        GeometryAbstractObject.__del__(self)
+
+    def delete(self):
+        """Object deletion
+        """
+        for _line in self.sides:
+            _line.removeLinkedObject(suit.core.objects.Object.LS_BASEONTHIS, self)
+
+        if self.__manualObject:
+            render_engine.SceneManager.destroyManualObject(self.__manualObject)
+
+        suit.core.objects.ObjectDepth.delete(self)
+        GeometryAbstractObject.delete(self)
+
+    def _getMaterialName(self):
+        """Returns material name based on object state
+        """
+        return geom_env.material_state_pat % ("triangle_%s" % (state_post[self.getState()]))
+
+    def _update(self, _timeSinceLastFrame):
+        """Object update
+        """
+        if not self.needUpdate: # do nothing
+            return
+
+            # notify, that text position need to be updated
+        self.needTextPositionUpdate = True
+
+        # calculate center position
+        minX = self.pts[0].getPosition().x
+        minY = self.pts[0].getPosition().y
+        maxX = minX
+        maxY = minY
+
+        for pt in self.pts:
+            pos = pt.getPosition()
+            minX = min([minX, pos.x])
+            minY = min([minY, pos.y])
+            maxX = max([maxX, pos.x])
+            maxY = max([maxY, pos.y])
+
+        x = (minX + maxX) / 2.0
+        y = (minY + maxY) / 2.0
+
+        self.position = ogre.Vector3(x, y, 0)
+        self.sceneNode.setPosition(self.position)
+
+        # update/create mesh
+        if self.__manualObject is None:
+            self.__manualObject = render_engine._ogreSceneManager.createManualObject(str(self))
+            self.__manualObject.setDynamic(True)
+            self.sceneNode.attachObject(self.__manualObject)
+            self.__manualObject.begin(self._getMaterialName())
+        else:
+            self.__manualObject.beginUpdate(0)
+
+        for point in self.pts:
+            self.__manualObject.position(point.getPosition() - self.position)
+            self.__manualObject.normal(0, 0, 1)
+
+        i = 1
+        print self.pts
+        while i < len(self.pts) - 1:
+            self.__manualObject.triangle(i + 1, i, 0)
+            i += 1
+
+        self.__manualObject.end()
+
+        suit.core.objects.ObjectDepth._update(self, _timeSinceLastFrame)
+
+    def _updateView(self):
+        """View update function
+        Updates state for object
+        """
+        suit.core.objects.ObjectDepth._updateView(self)
+
+        if self.needStateUpdate:
+            self.needStateUpdate = False
+            self.__manualObject.setMaterialName(0, self._getMaterialName())
+
+
+    def _checkRayIntersect(self, ray):
+        """Check if ray intersects polygon.
+
+        @param ray:    ray for intersection checking
+        @type ray:    ogre.Ray
+        """
+        res = suit.core.objects.ObjectDepth._checkRayIntersect(self, ray)
+        if not res[0]:
+            return res
+
+        res = ogre.Math.intersects(ray,
+                                   self.pts[0].getPosition(),
+                                   self.pts[1].getPosition(),
+                                   self.pts[2].getPosition())
+
+        if res.first:
+            return res.first, res.second
+
+        res = ogre.Math.intersects(ray,
+                                   self.pts[0].getPosition(),
+                                   self.pts[2].getPosition(),
+                                   self.pts[3].getPosition())
+
+        return res.first, res.second
+
+    def _getLinePoints(self, _lines):
+        """Get points from quadrangle side lines.
+        @return: List of quadrangle vertex points. If it impossible to
+        build quadrangle on specified \p _lines, then return None
+        """
+        # get points
+        _points = {}
+        for _line in _lines:
+            _points[_line.getBegin()] = 0
+            _points[_line.getEnd()] = 0
+
+        for _line in _lines:
+            _points[_line.getBegin()] += 1
+            _points[_line.getEnd()] += 1
+
+        for key, value in _points.items():
+            if value != 2:
+                return None
+
+        # sort points by link order
+        _line_flag = [False] * len(_lines)
+        _line_flag[0] = True
+
+        ordered_points = [_lines[0].getBegin(), _lines[0].getEnd()]
+        for idx in xrange(1, len(_lines)):
+            _line = _lines[idx]
+
+            if _line_flag[idx]: continue    # skip processed line
+
+            if _line.getBegin() is ordered_points[-1]:
+                ordered_points.append(_line.getEnd())
+                _line_flag[idx] = True
+            elif _line.getEnd() is ordered_points[-1]:
+                ordered_points.append(_line.getBegin())
+                _line_flag[idx] = True
+            elif _line.getBegin() is ordered_points[0]:
+                ordered_points.insert(0, _line.getEnd())
+                _line_flag[idx] = True
+            elif _line.getEnd() is ordered_points[0]:
+                ordered_points.insert(0, _line.getBegin())
+                _line_flag[idx] = True
+
+
+        return ordered_points
+
+    def setSides(self, _lines):
+        """Set quadrangle sides
+        @param _lines: GeometryLineSection objects, that are a sides of triangle
+        @type _lines: list of GeometryLineSection objects
+        """
+
+        if self.sides is not None:
+            for _line in self.sides:
+                _line.removeLinkedObject(suit.core.objects.Object.LS_BASEONTHIS, self)
+
+        self.sides = []
+        self.sides.extend(_lines)
+
+        self.pts = self._getLinePoints(self.sides)
+        assert self.pts is not None
+
+        self.needUpdate = True
+
+        if self.sides is not None:
+            for _line in self.sides:
+                _line.addLinkedObject(suit.core.objects.Object.LS_BASEONTHIS, self)
+
+    def makeBasedOnObjects(self, _objects):
+        """Create quadrangle based on specified objects
+        @param _objects: List of objects
+        @type _objects: list
+
+        @return: Return true, if polygon was created; otherwise return false
+        """
+
+        linesOnly = True
+        for obj in _objects:
+            if not isinstance(obj, GeometryLineSection):
+                linesOnly = False
+
+        if not linesOnly:
+            return False
+
+        self.pts = self._getLinePoints(_objects)
+        if not self.pts:
+            return False
+
+        self.setSides(_objects)
+        return True
+
+    def get_idtf(self):
+        """Returns object identifier.
+        It parse structures like: Point(A), Point A, pA and return A
+        """
+        #FIXME:    add parsing for Point(A), Point A and etc. structures
+        idtf = self.getText()
+        if idtf is None or len(idtf) == 0:
+            return None
+
+        return idtf
+
+    def build_text_idtf(self):
+        """Builds text identifier for an object
+        """
+        idtf = self.get_idtf()
+        if not idtf:
+
+            points = ""
+            for point in self.pts:
+                idtf = point.build_text_idtf()
+                if idtf is None:
+                    return idtf
+                if len(points):
+                    points += ";" + idtf
+
+            return u"%s(%s)" % (u'Многоугольник', points)
+        else:
+            return None

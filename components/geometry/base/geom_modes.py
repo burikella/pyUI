@@ -325,6 +325,15 @@ class GeometryEditMode(BaseEditMode):
             else:
                 self.active_object.delete()
             self.active_object = None
+
+        if key == ois.KC_M:
+            _selected = self._logic._getSheet().getSelected()
+            self.active_object = self._logic.createPolygon()
+            if self.active_object.makeBasedOnObjects(_selected):
+                self._logic._getSheet().addChild(self.active_object)
+            else:
+                self.active_object.delete()
+            self.active_object = None
                     
         if key == ois.KC_L:
             selected = self._logic._getSheet().getSelected()
@@ -358,29 +367,50 @@ class GeometryEditMode(BaseEditMode):
                     self.state = GeometryEditMode.ES_PerimeterChange
                     self.perimetr_changer = TextInput(obj, self._perimeter_change_callback, obj.getPropertyValue(GeometryAbstractObject.PropPerimeter))
 
+        if key == ois.KC_O:
+            selected = self._logic._getSheet().getSelected()
+            for obj in selected:
+                if isinstance(obj, GeometryQuadrangle):
+
+                    sheet = self._logic._getSheet()
+                    c = obj.getCircumCircleCenter()
+
+                    c = self._logic.createPoint(render_engine.pos3dTo2dWindow(c))
+                    sheet.addChild(c)
+                    c._updateView()
+
+                    p = obj.getSides()[0].getBegin()
+
+                    self.active_object = self._logic.createCircle()
+                    if self.active_object.makeBasedOnObjects([c, p]):
+                        sheet.addChild(self.active_object)
+                        obj.setCircumCircle(self.active_object)
+                    else:
+                        self.active_object.delete()
+                    self.active_object = None
+
         if key == ois.KC_V:
             selected = self._logic._getSheet().getSelected()
             for obj in selected:
                 if isinstance(obj, GeometryQuadrangle):
-                    if obj.canHaveInCircle():
 
-                        points = obj.getInCirclePoints()
-                        sheet = self._logic._getSheet()
+                    points = obj.getInCirclePoints()
+                    sheet = self._logic._getSheet()
 
-                        c = self._logic.createPoint(render_engine.pos3dTo2dWindow(points[0]))
-                        sheet.addChild(c)
-                        c._updateView()
+                    c = self._logic.createPoint(render_engine.pos3dTo2dWindow(points[0]))
+                    sheet.addChild(c)
+                    c._updateView()
 
-                        p = self._logic.createPoint(render_engine.pos3dTo2dWindow(points[1]))
-                        sheet.addChild(p)
-                        p._updateView()
+                    p = self._logic.createPoint(render_engine.pos3dTo2dWindow(points[1]))
+                    sheet.addChild(p)
+                    p._updateView()
 
-                        self.active_object = self._logic.createCircle()
-                        if self.active_object.makeBasedOnObjects([c, p]):
-                            sheet.addChild(self.active_object)
-                        else:
-                            self.active_object.delete()
-                        self.active_object = None
+                    self.active_object = self._logic.createCircle()
+                    if self.active_object.makeBasedOnObjects([c, p]):
+                        sheet.addChild(self.active_object)
+                    else:
+                        self.active_object.delete()
+                    self.active_object = None
 
         return False
     

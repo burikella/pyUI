@@ -141,3 +141,6 @@ class GeometryEditor(BaseModeLogic):
     
     def createQuadrangle(self):
         return gobjects.GeometryQuadrangle()
+
+    def createPolygon(self):
+        return gobjects.GeometryPolygon()
