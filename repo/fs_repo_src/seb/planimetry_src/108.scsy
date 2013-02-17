@@ -1,0 +1,184 @@
+$set1605={};
+
+$set1605->"граничная точка*";
+$set1605->"длина*";
+$con1604={
+  1_:"ломаная",
+  2_:$set1605
+};
+
+"отношения, области определения которых являются надмножеством описываемого множества и связки которых, в общем случае, связывают элементы описываемого множества с другими объектами*"->$con1604;
+stype_sheaf->$con1604;
+stype_sheaf->$set1605;
+$set1607={};
+
+$set1607->"совпадение*";
+$set1607->"включение множества*";
+$set1607->"объединение множеств*";
+$set1607->"пересечение множеств*";
+$set1607->"разность множеств*";
+$set1607->"разбиение множества*";
+$con1606={
+  1_:"ломаная",
+  2_:$set1607
+};
+
+"отношения, области определения которых строго пересекаются с описываемым множеством*"->$con1606;
+stype_sheaf->$con1606;
+stype_sheaf->$set1607;
+$el1608={};
+"Русский язык","STRING"->$el1608;
+$el1608=c=/"ломаная"/;
+$el1609={};
+"Русский язык","STRING"->$el1609;
+$el1609=c=/"простая цепь отрезков"/;
+$el1610={};
+"Русский язык","STRING"->$el1610;
+$el1610=c=/"Класс ломаная"/;
+$el1611={};
+"Русский язык","STRING"->$el1611;
+$el1611=c=/"Понятие ломаной"/;
+$el1612={};
+"Русский язык","STRING"->$el1612;
+$el1612=c=/"Множество ломанных"/;
+$el1613={};
+"Русский язык","STRING"->$el1613;
+$el1613=c=/"Множество всевозможных ломаных"/;
+$el1614={};
+"Русский язык","STRING"->$el1614;
+$el1614=c=/"Множество разных ломаных"/;
+$el1615={};
+"Русский язык","STRING"->$el1615;
+$el1615=c=/"polyline"/;
+"синонимы(ломаная)"={
+  "oсновной_":$el1608,
+  $el1609,
+  $el1610,
+  $el1611,
+  $el1612,
+  $el1613,
+  $el1614,
+  $el1615
+};
+"синонимы*"->"синонимы(ломаная)";
+$con1616={
+  1_:"синонимы(ломаная)",
+  2_:"ломаная" 
+};
+"идентификация*"->$con1616;
+stype_sheaf->"синонимы(ломаная)";
+stype_sheaf->$con1616;
+"Предметная область Геометрии Евклида"={ "понятия 3-го логического уровня_": "ломаная" };
+$con1617={};
+
+stype_sheaf->$con1617;
+$con1617_1={
+  1_:$con1617,
+  2_:"ломаная" 
+};
+
+"разбиение*"->$con1617_1;
+stype_sheaf->$con1617_1;
+$con1617->"простая ломаная";
+$con1617->"сложная ломаная";
+$con1618={
+  "подмножество_":"ломаная",
+  "надмножество_":"геометрическая фигура ограниченного размера"
+};
+
+"строгое включение*"->$con1618;
+stype_sheaf->$con1618;
+$con1619={
+  "подмножество_":"ломаная",
+  "надмножество_":"геометрическая фигура, имеющая граничные точки"
+};
+
+"строгое включение*"->$con1619;
+stype_sheaf->$con1619;
+$con1620={
+  "подмножество_":"ломаная",
+  "надмножество_":"планарная линия"
+};
+
+"строгое включение*"->$con1620;
+stype_sheaf->$con1620;
+$set1622={};
+
+$set1622->"Ломаная \<идентификатор точки\> , \<идентификатор точки\> ,...";
+$set1622->"Ломаная \<суффикс\>";
+$con1621={
+  1_:"ломаная",
+  2_:$set1622
+};
+
+"правила идентификации элементов*"->$con1621;
+stype_sheaf->$con1621;
+stype_sheaf->$set1622;
+$set1624={};
+$set1624->"Утв.(ломаная; граничная точка*; отрезок; длина*)";
+$con1623={
+  1_:$set1624,
+  2_:"ломаная"
+};
+
+"утверждение*"->$con1623;
+stype_sheaf->$con1623;
+stype_sheaf->$set1624;
+$el1626_0={};
+$el1626_0=b64/"iVBORw0KGgoAAAANSUhEUgAAAOIAAACNCAIAAAAl0DEPAAAABGdBTUEAALGPC/xhBQAAFplJREFUeF7t3WXQVVXbB/BHRxgF/eTIoIMyg93dLXYrFgaK3R2InTiA3WKg2NgoYmBhY2GL3d3d7+9598yZ+7nr7LPr7HPudT4498jaa691rf9e64r/da1p/v333/+EX5BAySUApuEXJFByCfyn5OMLwwsS+O+BH6QQJFB+CQSYln+Nwgi76m76ySef7LDDDuPHj//nn38qKLj00ktPOeWUAIoSSqCL7qZvv/32LLPMMv/883/wwQeVVTnyyCMHDhxYwkUKQ+q6MJ133nn79u07ZMiQP//8M8JBgGlpv4euC9NFF130wgsvXHDBBceMGRMhNcA0wLRcEnDog+ljjz02bNiw1Vdf/fXXXw8wLdcK/e9ouvRuCqZ004022mj33Xf/66+/wm5aWqR2dZhaGGBdeOGFL7/88kMPPTSYUOVEaoDpv/bR4cOHr7DCChtuuGGAaYBpcRL45ZdfJk6cePrpp0+aNOnnn39u++KKbhr901dffbXuuuv26NFjq622Km6U4U2xJdCEu+kff/zBS9+9e/dpppmmZ8+ejCSobSWQ9957b9VVV3366aej/8/J/8gjjyy++OK77LJLbNGFhsVJoAlhymyfb775KsS0JZZY4pVXXmklUcClkn777beV/+//TJ48ecqUKcXJPrwptgSaEKbPPfdcv379KjBdYIEF/J/YAgkNyyiBJoTpTz/9tNNOO0Uw7dat25577vnNN9+UUfZhTLEl0IQwNXcWkk10pplmOuKIIz788MPY0ggNSyqB5oTpq6++2qtXrz59+rzxxhslFXwYVi0SaE6YHnXUUWuvvfYaa6xx2WWX1SKN0LakEmhCmDrxl1122bFjxx5++OGDBg1qySgt6SKEYVWTQLPBVEjpnHPOEVLyx4QJE7hCP/3002pCCP9edgk0G0yBcoMNNhgxYgTBiy1xmo4bN67sixDGV00CzQZTeSNLL700E8rEHffbbrvtYYcdZmetJofw76WWQLPBdOuttz744IMrcfzRo0evs846H3/8cakXIQyumgSaCqZvvfXWQgstRCWtzFqYdJFFFnnqqaeqySH8e6kl0DwwjXjNAwYM+PXXXysi//LLL6mqo0aNCvZ+qWFYbXDNA9OpU6cutdRSt99+e8spY0sdf/zxNNRKXl41gYR/L6MEmgSmNkv0+2WWWea7775rJeZbb71VXl7LLbaM6xDG1KkEmgSmDndhpzPOOOPvv/9uNV8KK9v/gQceCEhoXAk0CUyh0InfLmHv999/lzpyzDHHNO4ihZE3A0ztoIMHD957773bsvSjBWZCie//+OOPYb0bVALNANMXX3xRaqgskY7W4P3338fnlxfVoIsUht3wMLWVnnjiibxOHW2l1lgbUX41TsJ6N6gEGh6mr7322vLLL48P1fkC0E133HHHtn6ABl22rjbsxoapbZIfyk75+eefd75y995773LLLcfq72oL3BzzbR+m999/P694JYWIVxLn6IADDnjnnXdKNW3e0PXXX/+4445jznc+MOmmXAEPPvhgqcYfBhNTAu3D9JprrnGSfvbZZ3qRJTx06FCuxxKaII8++ijXfZzEUWb+brvthigdUy6hWakkUAWm7BIJG0suuaRDs1TjjgwjWaMKQHRiPFXG7EBAl15llVXKNoswnjgS6AymSoMwoiNmcdvoTpzec23z/PPPL7bYYg899FDMtzz++OP8ViGJL6a4StWsQ5g6TPfYY4/evXv7bwkNZJySk046ac0114wvTfn7nPzBLRVfYuVp2SFM1WCyj4qSS3h3d0LZCPBREShmfk2ixOR3M0RVe6umPkPjAiTQIUyVpmczUft4HJ2t0jULGE38V1x//fUrrbRSraN6+OGHsaii2tDh10ASqG7pq6e8ySabbLHFFi6pKcnEKMpSR7jMat0Xudh8crfddltJJhKGEVMC1WGqoyeffFKqxsiRIys2NcjWkWisdJ7xPPHEEzEnWWn222+/bbfddieccALVttZnQ/s6SqB9mKISy9aQQByNjDfnoosuEuyBDzVB3akw/fTTq3qnpkjxYLWDKpWvmFmCvBHbMD2b4fX111/XUejh1bVKoH2Ycuy/9NJLLZ1QcjU5dBguG2+8caUm42yzzVZ8IbFnn32WX4mWWetUo/bKmrrDJKinyaRXr6dqi+mz911O1/Lqdate5NAN4Mwzz+Sl511K9l7J0Hj+7oJK9nh4qi4SqA2m9lfX0ygWHiFV1buCd1MgE8Xlh0pw4kfyNQXVJKXzlzBgURcENMRLa4OpKTFc3PgxwwwzuFCBjsgoKXKet9xyCxU5KmqS+MfSR1GIGAvh1xASqBmm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"/;
+ui_format_png->$el1626_0;
+$con1625_0={
+  1_:"ломаная",
+  2_:"$el1626_0"
+};
+
+"иллюстрация*"->$con1625_0;
+stype_sheaf->$con1625_0;
+$con1627_0={
+  1_:"ломаная",
+  2_:"Опр.(ломаная)"
+};
+
+"определение*"->$con1627_0;
+stype_sheaf->$con1627_0;
+$el1629={};
+$el1629=c=/"Геометрическая фигура, состоящая из множества геометрических точек и множества отрезков, соединяющих эти точки, и граничные точки этих отрезков не лежат на одной прямой."/;
+"Русский язык","STRING"->$el1629;
+$con1628={
+  $el1629
+};
+
+$con1628_1={
+  1_:"Опр.(ломаная)",
+  2_:$con1628 
+};
+"трансляция*"->$con1628_1;
+stype_sheaf->$con1628_1;
+stype_sheaf->$con1628;
+$set1631={};
+$set1631->"геометрическая точка";
+$set1631->"отрезок";
+$set1631->"граничная точка*";
+$set1631->"непрямолинейная фигура";
+$con1630={
+  1_:"Опр.(ломаная)",
+  2_:$set1631
+};
+
+"используемые константы*"->$con1630;
+stype_sheaf->$con1630;
+stype_sheaf->$set1631;
+$el1633={};
+$el1633=c=/"Длина ломаной не меньше длины отрезка, соединяющего ее концы."/;
+"Русский язык","STRING"->$el1633;
+$con1632={
+  $el1633
+};
+
+$con1632_1={
+  1_:"Утв.(ломаная; граничная точка*; отрезок; длина*)",
+  2_:$con1632 
+};
+"трансляция*"->$con1632_1;
+stype_sheaf->$con1632_1;
+stype_sheaf->$con1632;

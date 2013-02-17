@@ -1,0 +1,40 @@
+$set3050={};
+$set3050->"Факт.утв.(Пирамида(SABCD))";
+$con3049={
+  1_:$set3050,
+  2_:"Пирамида SABCD"
+};
+
+"утверждение*"->$con3049;
+stype_sheaf->$con3049;
+stype_sheaf->$set3050;
+"пирамида"->"Пирамида SABCD";
+"геометрическая фигура ограниченного размера"={ "пример_": "Пирамида SABCD" };
+
+"непланарная фигура"={ "пример_": "Пирамида SABCD" };
+
+$el3052_0={};
+$el3052_0=b64/"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"/;
+ui_format_png->$el3052_0;
+$con3051_0={
+  1_:"Пирамида SABCD",
+  2_:"$el3052_0"
+};
+
+"иллюстрация*"->$con3051_0;
+stype_sheaf->$con3051_0;
+$el3054_0={};
+$el3057={};
+$el3057=c=/"<i>SABCD</i> \ni <i>пирамида</i> ; <i>S</i> , <i>A</i> , <i>B</i> , <i>C</i> , <i>D</i> \ni <i>геометрическая точка</i> ; < <i>SABCD</i> , <i>A</i> >, < <i>SABCD</i> , <i>B</i> >, < <i>SABCD</i> , <i>C</i> >, < <i>SABCD</i> , <i>D</i> > \ni <i>вершина*</i> ; < <i>SABCD</i> , <i>a</i> >, < <i>SABCD</i> , <i>b</i> >, < <i>SABCD</i> , <i>c</i> >, < <i>SABCD</i> , <i>d</i> >, < <i>SABCD</i> , <i>a2</i> >, < <i>SABCD</i> , <i>b2</i> >, < <i>SABCD</i> , <i>c2</i> >, < <i>SABCD</i> , <i>d2</i> > \ni <i>ребро*</i> ; <i>a</i> , <i>b</i> , <i>c</i> , <i>d</i> , <i>a2</i> , <i>b2</i> , <i>c2</i> , <i>d2</i> \ni <i>отрезок</i> ."/;
+"Русский язык","STRING"->$el3057;
+$con3056={
+  $el3057
+};
+
+$con3056_1={
+  1_:"Факт.утв.(Пирамида(SABCD))",
+  2_:$con3056 
+};
+"трансляция*"->$con3056_1;
+stype_sheaf->$con3056_1;
+stype_sheaf->$con3056;

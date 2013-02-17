@@ -1,0 +1,131 @@
+$el260={};
+"Русский язык","STRING"->$el260;
+$el260=c=/"внутренние накрест лежащие углы*"/;
+$el261={};
+"Русский язык","STRING"->$el261;
+$el261=c=/"быть внутренними накрест лежащими углами*"/;
+"синонимы(внутренние накрест лежащие углы*)"={
+  "oсновной_":$el260,
+  $el261
+};
+"синонимы*"->"синонимы(внутренние накрест лежащие углы*)";
+$con262={
+  1_:"синонимы(внутренние накрест лежащие углы*)",
+  2_:"внутренние накрест лежащие углы*" 
+};
+"идентификация*"->$con262;
+stype_sheaf->"синонимы(внутренние накрест лежащие углы*)";
+stype_sheaf->$con262;
+"Предметная область Геометрии Евклида"={ "понятия Х-го логического уровня_": "внутренние накрест лежащие углы*" };
+$set264={};
+$set264->"Утв.(внутренние накрест лежащие углы*; пересекающиеся прямые*; конгруэнтность*; мера угла*)";
+$set264->"Утв.(внутренние накрест лежащие углы*; пересекающиеся прямые*; конгруэнтность*; односторонние углы*; сумма*; мера угла*)";
+$con263={
+  1_:$set264,
+  2_:"внутренние накрест лежащие углы*"
+};
+
+"утверждение*"->$con263;
+stype_sheaf->$con263;
+stype_sheaf->$set264;
+"отношение"->"внутренние накрест лежащие углы*";
+"бинарное отношение"->"внутренние накрест лежащие углы*";
+"неориентированное отношение"->"внутренние накрест лежащие углы*";
+$con265_0={
+  1_:"внутренние накрест лежащие углы*",
+  2_:"Опр.(внутренние накрест лежащие углы*)"
+};
+
+"определение*"->$con265_0;
+stype_sheaf->$con265_0;
+$el267_0={};
+$el267_0=b64/"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"/;
+ui_format_png->$el267_0;
+$con266_0={
+  1_:"внутренние накрест лежащие углы*",
+  2_:"$el267_0"
+};
+
+"иллюстрация*"->$con266_0;
+stype_sheaf->$con266_0;
+$set269={};
+
+$set269->"угол_";
+$set269->"угол_";
+$con268={
+  1_:"внутренние накрест лежащие углы*",
+  2_:$set269
+};
+
+"схема отношения*"->$con268;
+stype_sheaf->$con268;
+stype_sheaf->$set269;
+$con270_0={
+  1_:"внутренние накрест лежащие углы*",
+  2_:"планарный угол \cup двугранный угол"
+};
+
+"домен*"->$con270_0;
+stype_sheaf->$con270_0;
+$con271_0={
+  1_:"внутренние накрест лежащие углы*",
+  2_:"планарный угол \cup двугранный угол"
+};
+
+"область определения*"->$con271_0;
+stype_sheaf->$con271_0;
+$el273={};
+$el273=c=/"Внутренними накрест лежащими называются углы, образованные при пересечении двух прямых секущей, лежащие по разные стороны от секущей между прямыми."/;
+"Русский язык","STRING"->$el273;
+$con272={
+  $el273
+};
+
+$con272_1={
+  1_:"Опр.(внутренние накрест лежащие углы*)",
+  2_:$con272 
+};
+"трансляция*"->$con272_1;
+stype_sheaf->$con272_1;
+stype_sheaf->$con272;
+$set275={};
+$set275->"угол";
+$set275->"пересекающиеся прямые*";
+$set275->"секущая*";
+$set275->"между_";
+$con274={
+  1_:"Опр.(внутренние накрест лежащие углы*)",
+  2_:$set275
+};
+
+"используемые константы*"->$con274;
+stype_sheaf->$con274;
+stype_sheaf->$set275;
+$el277={};
+$el277=c=/"Если при пересечении двух прямых третьей прямой внутренние накрест лежащие углы одной пары равны, то внутренние накрест лежащие другой пары тоже равны."/;
+"Русский язык","STRING"->$el277;
+$con276={
+  $el277
+};
+
+$con276_1={
+  1_:"Утв.(внутренние накрест лежащие углы*; пересекающиеся прямые*; конгруэнтность*; мера угла*)",
+  2_:$con276 
+};
+"трансляция*"->$con276_1;
+stype_sheaf->$con276_1;
+stype_sheaf->$con276;
+$el279={};
+$el279=c=/"Если при пересечении двух прямых третьей прямой внутренние накрест лежащие углы равны, то сумма каждой пары односторонних углов равна 180 градусов."/;
+"Русский язык","STRING"->$el279;
+$con278={
+  $el279
+};
+
+$con278_1={
+  1_:"Утв.(внутренние накрест лежащие углы*; пересекающиеся прямые*; конгруэнтность*; односторонние углы*; сумма*; мера угла*)",
+  2_:$con278 
+};
+"трансляция*"->$con278_1;
+stype_sheaf->$con278_1;
+stype_sheaf->$con278;

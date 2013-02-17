@@ -1,0 +1,87 @@
+$el4193={};
+"Русский язык","STRING"->$el4193;
+$el4193=c=/"Равносторонний треугольник XYZ"/;
+$el4194={};
+"Русский язык","STRING"->$el4194;
+$el4194=c=/"Тр-к(X; Y; Z)"/;
+$el4195={};
+"Русский язык","STRING"->$el4195;
+$el4195=c=/"Правильный треугольник(X; Y; Z)"/;
+$el4196={};
+"Русский язык","STRING"->$el4196;
+$el4196=c=/"Равносторонний треугольник(X; Y; Z)"/;
+$el4197={};
+"Русский язык","STRING"->$el4197;
+$el4197=c=/"Треугольник, вершинами которого являются Точка X, Точка Y, Точка Z"/;
+"синонимы(Равносторонний треугольник XYZ)"={
+  "oсновной_":$el4193,
+  $el4194,
+  $el4195,
+  $el4196,
+  $el4197
+};
+"синонимы*"->"синонимы(Равносторонний треугольник XYZ)";
+$con4198={
+  1_:"синонимы(Равносторонний треугольник XYZ)",
+  2_:"Равносторонний треугольник XYZ" 
+};
+"идентификация*"->$con4198;
+stype_sheaf->"синонимы(Равносторонний треугольник XYZ)";
+stype_sheaf->$con4198;
+$set4200={};
+$set4200->"Факт.утв.(Равносторонний треугольник XYZ)";
+$con4199={
+  1_:$set4200,
+  2_:"Равносторонний треугольник XYZ"
+};
+
+"утверждение*"->$con4199;
+stype_sheaf->$con4199;
+stype_sheaf->$set4200;
+"равносторонний треугольник"->"Равносторонний треугольник XYZ";
+"геометрическая фигура ограниченного размера"={ "пример_": "Равносторонний треугольник XYZ" };
+
+"равнобедренный треугольник"={ "пример_": "Равносторонний треугольник XYZ" };
+
+"остроугольный треугольник"={ "пример_": "Равносторонний треугольник XYZ" };
+
+"треугольник"={ "пример_": "Равносторонний треугольник XYZ" };
+
+"многоугольник"={ "пример_": "Равносторонний треугольник XYZ" };
+
+"правильный многоугольник"={ "пример_": "Равносторонний треугольник XYZ" };
+
+"выпуклый многоугольник"={ "пример_": "Равносторонний треугольник XYZ" };
+
+"геометрическая фигура"={ "пример_": "Равносторонний треугольник XYZ" };
+
+"планарная фигура"={ "пример_": "Равносторонний треугольник XYZ" };
+
+$el4202_0={};
+$el4202_0=b64/"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"/;
+ui_format_png->$el4202_0;
+$con4201_0={
+  1_:"Равносторонний треугольник XYZ",
+  2_:"$el4202_0"
+};
+
+"иллюстрация*"->$con4201_0;
+stype_sheaf->$con4201_0;
+$el4204={};
+$el4204=c=/"<i>XYZ</i> \ni <i>равносторонний треугольник</i> <i>X</i> , <i>Y</i> , <i>Z</i> \ni <i>геометрическая точка</i> ; < <i>XYZ</i> , <i>X</i> >, < <i>XYZ</i> , <i>Y</i> >, < <i>XYZ</i> , <i>Z</i> > \ni <i>вершина*</i> ; <i>x</i> , <i>y</i> , <i>z</i> \ni <i>отрезок</i> < <i>XYZ</i> , <i>x</i> >, < <i>XYZ</i> , <i>y</i> >, < <i>XYZ</i> , <i>z</i> > \ni <i>сторона*</i> ; <i><math>\alpha</math></i> , <i><math>\beta</math></i> , <i><math>\gamma</math></i> \ni <i>угол</i> ; < <i>XYZ</i> , <i><math>\alpha</math></i> >, < <i>XYZ</i> , <i><math>\beta</math></i> >, < <i>XYZ</i> , <i><math>\gamma</math></i> > \ni <i>внутренний угол*</i> ; < <i>y</i> , <i>X</i> >, < <i>z</i> , <i>X</i> >, < <i>x</i> , <i>Y</i> >, < <i>z</i> , <i>Y</i> >, < <i>y</i> , <i>Z</i> >, < <i>x</i> , <i>Z</i> > \ni <i>граничная точка*</i> ; {<i>x</i> , <i>y</i> } , {<i>x</i> , <i>z</i> } , {<i>y</i> , <i>z</i> } <i>конгруэнтность*</i> ; {<math>\alpha</math>, <math>\gamma</math> } , {<math>\alpha</math>, <math>\beta</math> } , {<math>\gamma</math>, <math>\beta</math> } \ni <i>конгруэнтность*</i> ."/;
+"Русский язык","STRING"->$el4204;
+$el4205={};
+$el4205=c=/"<i>Треугольник XYZ</i> является равносторонним, Геометрические точки <i>X</i> , <i>Y</i> и <i>Z</i> являются вершинами Треугольника <i>XYZ</i> . Отрезки <i>x</i> , <i>y</i> и <i>z</i> являются сторонами Треугольника <i>XYZ</i> . Углы <math>\alpha</math>, <math>\beta</math>, <math>\gamma</math> являются внутренним углами Треугольника <i>XYZ</i> . Углы <math>\alpha</math>, <math>\beta</math> и <math>\gamma</math> равны. Отрезки <i>x</i> , <i>y</i> и <i>z</i> равны. Точка <i>X</i> является граничной точкой отрезков <i>y</i> , <i>z</i> . Точка <i>Y</i> является граничной точкой отрезков <i>x</i> , <i>z</i> . Точка <i>Z</i> является граничной точкой отрезков <i>x</i> , <i>y</i> ."/;
+"Русский язык","STRING"->$el4205;
+$con4203={
+  $el4204,
+  $el4205
+};
+
+$con4203_1={
+  1_:"Факт.утв.(Равносторонний треугольник XYZ)",
+  2_:$con4203 
+};
+"трансляция*"->$con4203_1;
+stype_sheaf->$con4203_1;
+stype_sheaf->$con4203;

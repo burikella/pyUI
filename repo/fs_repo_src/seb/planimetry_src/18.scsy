@@ -1,0 +1,115 @@
+$el134={};
+"–усский €зык","STRING"->$el134;
+$el134=c=/"вертикальные углы*"/;
+$el135={};
+"–усский €зык","STRING"->$el135;
+$el135=c=/"быть вертикальными углами*"/;
+"синонимы(вертикальные углы*)"={
+  "oсновной_":$el134,
+  $el135
+};
+"синонимы*"->"синонимы(вертикальные углы*)";
+$con136={
+  1_:"синонимы(вертикальные углы*)",
+  2_:"вертикальные углы*" 
+};
+"идентификаци€*"->$con136;
+stype_sheaf->"синонимы(вертикальные углы*)";
+stype_sheaf->$con136;
+"ѕредметна€ область √еометрии ≈вклида"={ "пон€ти€ ’-го логического уровн€_": "вертикальные углы*" };
+$set138={};
+$set138->"”тв.(вертикальные углы*; конгруэнтность*)";
+$con137={
+  1_:$set138,
+  2_:"вертикальные углы*"
+};
+
+"утверждение*"->$con137;
+stype_sheaf->$con137;
+stype_sheaf->$set138;
+"отношение"->"вертикальные углы*";
+"бинарное отношение"->"вертикальные углы*";
+"неориентированное отношение"->"вертикальные углы*";
+$con139_0={
+  1_:"вертикальные углы*",
+  2_:"ќпр.(вертикальные углы*)"
+};
+
+"определение*"->$con139_0;
+stype_sheaf->$con139_0;
+$el141_0={};
+$el141_0=b64/"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"/;
+ui_format_png->$el141_0;
+$con140_0={
+  1_:"вертикальные углы*",
+  2_:"$el141_0"
+};
+
+"иллюстраци€*"->$con140_0;
+stype_sheaf->$con140_0;
+$set143={};
+
+$set143->"угол_";
+$set143->"угол_";
+$con142={
+  1_:"вертикальные углы*",
+  2_:$set143
+};
+
+"схема отношени€*"->$con142;
+stype_sheaf->$con142;
+stype_sheaf->$set143;
+$con144_0={
+  1_:"вертикальные углы*",
+  2_:"угол"
+};
+
+"домен*"->$con144_0;
+stype_sheaf->$con144_0;
+$con145_0={
+  1_:"вертикальные углы*",
+  2_:"планарный угол \cup двугранный угол"
+};
+
+"область определени€*"->$con145_0;
+stype_sheaf->$con145_0;
+$el147={};
+$el147=c=/"¬ертикальными углами называетс€ пара углов, у которых вершина обща€, а стороны одного угла составл€ют продолжение сторон другого угла."/;
+"–усский €зык","STRING"->$el147;
+$con146={
+  $el147
+};
+
+$con146_1={
+  1_:"ќпр.(вертикальные углы*)",
+  2_:$con146 
+};
+"трансл€ци€*"->$con146_1;
+stype_sheaf->$con146_1;
+stype_sheaf->$con146;
+$set149={};
+$set149->"угол";
+$set149->"вершина*";
+$set149->"сторона*";
+$con148={
+  1_:"ќпр.(вертикальные углы*)",
+  2_:$set149
+};
+
+"используемые константы*"->$con148;
+stype_sheaf->$con148;
+stype_sheaf->$set149;
+$el151={};
+$el151=c=/"¬ертикальные углы равны."/;
+"–усский €зык","STRING"->$el151;
+$con150={
+  $el151
+};
+
+$con150_1={
+  1_:"”тв.(вертикальные углы*; конгруэнтность*)",
+  2_:$con150 
+};
+"трансл€ци€*"->$con150_1;
+stype_sheaf->$con150_1;
+stype_sheaf->$con150;

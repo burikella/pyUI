@@ -1,0 +1,69 @@
+$el2039={};
+"Русский язык","STRING"->$el2039;
+$el2039=c=/"Неправильный многоугольник KABCDE"/;
+$el2040={};
+"Русский язык","STRING"->$el2040;
+$el2040=c=/"Неправильный многоугольник(K; A; B; C; D; E)"/;
+$el2041={};
+"Русский язык","STRING"->$el2041;
+$el2041=c=/"Неправильный многоугольник, вершинами которого являются Точка K, Точка A, Точка B, Точка C, Точка D и Точка E"/;
+"синонимы(Неправильный многоугольник KABCDE)"={
+  "oсновной_":$el2039,
+  $el2040,
+  $el2041
+};
+"синонимы*"->"синонимы(Неправильный многоугольник KABCDE)";
+$con2042={
+  1_:"синонимы(Неправильный многоугольник KABCDE)",
+  2_:"Неправильный многоугольник KABCDE" 
+};
+"идентификация*"->$con2042;
+stype_sheaf->"синонимы(Неправильный многоугольник KABCDE)";
+stype_sheaf->$con2042;
+$set2044={};
+$set2044->"Факт.утв.(Неправильный многоугольник KABCDE)";
+$con2043={
+  1_:$set2044,
+  2_:"Неправильный многоугольник KABCDE"
+};
+
+"утверждение*"->$con2043;
+stype_sheaf->$con2043;
+stype_sheaf->$set2044;
+"неправильный многоугольник"->"Неправильный многоугольник KABCDE";
+"многоугольник"={ "пример_": "Неправильный многоугольник KABCDE" };
+
+"выпуклый многоугольник"={ "пример_": "Неправильный многоугольник KABCDE" };
+
+"геометрическая фигура"={ "пример_": "Неправильный многоугольник KABCDE" };
+
+"планарная фигура"={ "пример_": "Неправильный многоугольник KABCDE" };
+
+$el2046_0={};
+$el2046_0=b64/"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"/;
+ui_format_png->$el2046_0;
+$con2045_0={
+  1_:"Неправильный многоугольник KABCDE",
+  2_:"$el2046_0"
+};
+
+"иллюстрация*"->$con2045_0;
+stype_sheaf->$con2045_0;
+$el2048={};
+$el2048=c=/"<i>KABCDE</i> \ni <i>многоугольник</i> ; <i>K</i> , <i>A</i> , <i>B</i> , <i>C</i> , <i>D</i> , <i>E</i> \ni <i>геометрическая точка</i> ; < <i>KABCDE</i> , <i>K</i> >, < <i>KABCDE</i> , <i>A</i> >, < <i>ABCDEF</i> , <i>B</i> > , < <i>ABCDEF</i> , <i>C</i> > , < <i>ABCDEF</i> , <i>D</i> > , < <i>ABCDEF</i> , <i>E</i> > \ni <i>вершина*</i> ; <i>k</i> , <i>a</i> , <i>b</i> , <i>c</i> , <i>d</i> , <i>e</i> \ni <i>отрезок</i> ; < <i>KABCDE</i> , <i>k</i> >, < <i>ABCDEF</i> , <i>a</i> >, < <i>ABCDEF</i> , <i>b</i> > ,< <i>ABCDEF</i> , <i>c</i> > ,< <i>ABCDEF</i> , <i>d</i> >,< <i>ABCDEF</i> , <i>e</i> > \ni <i>сторона*</i> ; < <i>k</i> , <i>K</i> >, < <i>k</i> , <i>E</i> >, < <i>a</i> , <i>A</i> >, < <i>a</i> , <i>K</i> >, < <i>b</i> , <i>B</i> >, < <i>b</i> , <i>A</i> >,< <i>c</i> , <i>C</i> >, < <i>c</i> , <i>B</i> >,< <i>d</i> , <i>D</i> >,< <i>d</i> , <i>C</i> >,< <i>e</i> , <i>E</i> >,< <i>e</i> , <i>D</i> > \ni <i>граничная точка*</i> <math>\alpha</math>, <math>\beta</math>, <math>\gamma</math>, <math>\delta</math>, <math>\epsilon</math>, <math>\sigma</math> \ni <i>угол</i> ; < <i>KABCDE</i> , <math>\alpha</math>>, < <i>KABCDE</i> , <math>\beta</math>>, < <i>KABCDE</i> , <math>\gamma</math>>, < <i>KABCDE</i> , <math>\delta</math>>, < <i>KABCDE</i> , <math>\epsilon</math>>, < <i>KABCDE</i> , <math>\sigma</math>> \ni <i>внутренний угол*</i> ;"/;
+"Русский язык","STRING"->$el2048;
+$el2049={};
+$el2049=c=/"<i>KABCDE</i> - Неправильный многоугольник. Геометрические точки <i>K</i> , <i>A</i> , <i>B</i> , <i>C</i> , <i>D</i> и <i>E</i> являются вершинами Многоугольника <i>ABCDEF</i> . Отрезки <i>k</i> , <i>a</i> , <i>b</i> , <i>c</i> , <i>d</i> , <i>e</i> являются сторонами Многоугольника <i>KABCDE</i> . Углы <math>\alpha</math>, <math>\beta</math>, <math>\gamma</math>, <math>\delta</math>, <math>\epsilon</math> и <math>\sigma</math> равны и являются внутренним углами Многоугольника <i>KABCDE</i> . Точка <i>K</i> является граничной точкой отрезков <i>e</i> , <i>a</i> . Точка <i>A</i> является граничной точкой отрезков <i>a</i> , <i>b</i> . Точка <i>B</i> является граничной точкой отрезков <i>b</i> , <i>c</i> . Точка <i>C</i> является граничной точкой отрезков <i>c</i> , <i>d</i> . Точка <i>D</i> является граничной точкой отрезков <i>d</i> , <i>e</i> . Точка <i>E</i> является граничной точкой отрезков <i>e</i> , <i>d</i> ."/;
+"Русский язык","STRING"->$el2049;
+$con2047={
+  $el2048,
+  $el2049
+};
+
+$con2047_1={
+  1_:"Факт.утв.(Неправильный многоугольник KABCDE)",
+  2_:$con2047 
+};
+"трансляция*"->$con2047_1;
+stype_sheaf->$con2047_1;
+stype_sheaf->$con2047;

@@ -1,0 +1,80 @@
+$el4311={};
+"Русский язык","STRING"->$el4311;
+$el4311=c=/"Разносторонняя трапеция ZXCV"/;
+$el4312={};
+"Русский язык","STRING"->$el4312;
+$el4312=c=/"Тр-я(Z; X; C; V)"/;
+$el4313={};
+"Русский язык","STRING"->$el4313;
+$el4313=c=/"Разносторонняя трапеция(Z; X; C; V)"/;
+$el4314={};
+"Русский язык","STRING"->$el4314;
+$el4314=c=/"Разносторонняя трапеция, вершинами которой являются Точка Z, Точка X, Точка C, Точка V"/;
+"синонимы(Разносторонняя трапеция ZXCV)"={
+  "oсновной_":$el4311,
+  $el4312,
+  $el4313,
+  $el4314
+};
+"синонимы*"->"синонимы(Разносторонняя трапеция ZXCV)";
+$con4315={
+  1_:"синонимы(Разносторонняя трапеция ZXCV)",
+  2_:"Разносторонняя трапеция ZXCV" 
+};
+"идентификация*"->$con4315;
+stype_sheaf->"синонимы(Разносторонняя трапеция ZXCV)";
+stype_sheaf->$con4315;
+$set4317={};
+$set4317->"Факт.утв.(Разносторонняя трапеция ZXCV)";
+$con4316={
+  1_:$set4317,
+  2_:"Разносторонняя трапеция ZXCV"
+};
+
+"утверждение*"->$con4316;
+stype_sheaf->$con4316;
+stype_sheaf->$set4317;
+"разносторонняя трапеция"->"Разносторонняя трапеция ZXCV";
+"геометрическая фигура ограниченного размера"={ "пример_": "Разносторонняя трапеция ZXCV" };
+
+"трапеция"={ "пример_": "Разносторонняя трапеция ZXCV" };
+
+"четырехугольник"={ "пример_": "Разносторонняя трапеция ZXCV" };
+
+"разносторонняя трапеция"={ "пример_": "Разносторонняя трапеция ZXCV" };
+
+"многоугольник"={ "пример_": "Разносторонняя трапеция ZXCV" };
+
+"выпуклый многоугольник"={ "пример_": "Разносторонняя трапеция ZXCV" };
+
+"геометрическая фигура"={ "пример_": "Разносторонняя трапеция ZXCV" };
+
+"планарная фигура"={ "пример_": "Разносторонняя трапеция ZXCV" };
+
+$el4319_0={};
+$el4319_0=b64/"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"/;
+$con4318_0={
+  1_:"Разносторонняя трапеция ZXCV",
+  2_:"$el4319_0"
+};
+
+"иллюстрация*"->$con4318_0;
+stype_sheaf->$con4318_0;
+$el4321={};
+$el4321=c=/"<i>ZXCV</i> \ni <i>трапеция</i> ; <i>Z, X, C, V</i> \ni <i>геометрическая точка</i> ; <i>< ZXCV, Z>, < ZXCV, X >, < ZXCV, C, < ZXCV, V ></i> \ni <i>вершина*</i> ; <i>z, x, c, v</i> \ni <i>отрезок</i> ; < <i>x</i> , <i>X</i> >, < <i>x</i> , <i>Z</i> >, < <i>c</i> , <i>X</i> >, < <i>c</i> , <i>C</i> >, < <i>v</i> , <i>C</i> >, < <i>v</i> , <i>V</i> >, < <i>z</i> , <i>Z</i> >, < <i>z</i> , <i>V</i> > \ni <i>граничная точка*</i> ; <i>Z</i> \ni <i>z</i> ; <i>Z</i> \ni <i>x</i> ; <i>X</i> \ni <i>x</i> ; <i>X</i> \ni <i>c</i> ; <i>C</i> \ni <i>c</i> ; <i>C</i> \ni <i>v</i> ; <i>V</i> \ni <i>v</i> ; <i>V</i> \ni <i>z</i> ; <i>< ZXCV, x>, < ZXCV, v ></i> \ni <i>боковая сторона*</i> ; <i>< ZXCV, z>, < ZXCV, c ></i> \ni <i>основание*</i> ; <i><math>\alpha</math></i> , <i><math>\beta</math></i> , <i><math>\gamma</math></i> , <i><math>\sigma</math></i> \ni <i>угол</i> ; < <i>ZXCV</i> , <i><math>\alpha</math></i> >, < <i>ZXCV</i> , <i><math>\beta</math></i> >, < <i>ZXCV</i> , <i><math>\gamma</math></i> >, < <i>ZXCV</i> , <i><math>\sigma</math></i> > \ni <i>внутренний угол*</i> ."/;
+"Русский язык","STRING"->$el4321;
+$el4322={};
+$el4322=c=/"<i>ZXCV</i> - трапеция. Геометрические точки <i>Z</i> , <i>X</i> , <i>C</i> и <i>V</i> являются вершинами Трапеции <i>ZXCV</i> . Отрезки <i>x</i> , <i>v</i> являются боковыми сторонами, а отрезки <i>z</i> , <i>c</i> являются основаниями Трапеции <i>ZXCV</i> . Точка <i>Z</i> является граничной точкой отрезков <i>z</i> , <i>x</i> . Точка <i>X</i> является граничной точкой отрезков <i>x</i> , <i>c</i> . Точка <i>C</i> является граничной точкой отрезков <i>c</i> , <i>v</i> . Точка <i>V</i> является граничной точкой отрезков <i>v</i> , <i>z</i> . Углы <math>\alpha</math>, <math>\beta</math>, <math>\gamma</math>, <math>\sigma</math> являются внутренним углами Трапеции <i>ZXCV</i> ."/;
+"Русский язык","STRING"->$el4322;
+$con4320={
+  $el4321,
+  $el4322
+};
+
+$con4320_1={
+  1_:"Факт.утв.(Разносторонняя трапеция ZXCV)",
+  2_:$con4320 
+};
+"трансляция*"->$con4320_1;
+stype_sheaf->$con4320_1;
+stype_sheaf->$con4320;

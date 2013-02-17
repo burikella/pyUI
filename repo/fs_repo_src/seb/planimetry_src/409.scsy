@@ -1,0 +1,48 @@
+$set4725={};
+$set4725->"‘акт.утв.(—фера (A; R))";
+$con4724={
+  1_:$set4725,
+  2_:"—фера(A; R)"
+};
+
+"утверждение*"->$con4724;
+stype_sheaf->$con4724;
+stype_sheaf->$set4725;
+"сфера"->"—фера(A; R)";
+"геометрическа€ фигура ограниченного размера"={ "пример_": "—фера(A; R)" };
+
+"сфера"={ "пример_": "—фера(A; R)" };
+
+"непланарна€ поверхность"={ "пример_": "—фера(A; R)" };
+
+"поверхность"={ "пример_": "—фера(A; R)" };
+
+$el4727_0={};
+$el4727_0=b64/"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"/;
+ui_format_png->$el4727_0;
+$con4726_0={
+  1_:"—фера(A; R)",
+  2_:"$el4727_0"
+};
+
+"иллюстраци€*"->$con4726_0;
+stype_sheaf->$con4726_0;
+$el4729_1={};
+$el4732={};
+$el4732=c=/"<i>(A; R)</i> \ni <i>сфера</i> ; <i>A</i> \ni <i>геометрическа€ точка</i> ; <i>R</i> \ni <i>отрезок</i> ; < <i>(A; R)</i> , <i>A</i> > \ni <i>центр*</i> ; < <i>(A; R)</i> , <i>R</i> > \ni <i>радиус*</i> ;"/;
+"–усский €зык","STRING"->$el4732;
+$el4733={};
+$el4733=c=/"<i>(A; R)</i> - сфера. √еометрическа€ точка <i>A</i> €вл€етс€ центром сферы <i>(A; R)</i> . ќтрезок <i>R</i> €вл€етс€ радиусом сферы <i>(A; R)</i> ."/;
+"–усский €зык","STRING"->$el4733;
+$con4731={
+  $el4732,
+  $el4733
+};
+
+$con4731_1={
+  1_:"‘акт.утв.(—фера (A; R))",
+  2_:$con4731 
+};
+"трансл€ци€*"->$con4731_1;
+stype_sheaf->$con4731_1;
+stype_sheaf->$con4731;

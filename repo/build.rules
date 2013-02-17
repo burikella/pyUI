@@ -19,10 +19,10 @@
 # example 
 
 # core KB
-#scn:> "/seb/planimetry" "/etc/com_keynodes" "seb/planimetry_src" "http://ostisgeometry.sourceforge.net" "Служебная категория"
+#scn:> "/seb/planimetry" "/etc/com_keynodes" "seb/planimetry_src" "http://geometry.buriks.ru" "Служебная категория"
 scg:> "seb/planimetry_src" -> "seb/planimetry"
 
-scs:> "seb/lingv_src" -> "seb/lingv"
+#scs:> "seb/lingv_src" -> "seb/lingv"
 
 #scn:> "/seb/sets" "/etc/com_keynodes" "seb/sets_src" "http://ostissets.sourceforge.net/wiki" "Общие понятия теории множеств"
 #scs:> "seb/sets_src" -> "seb/sets"
@@ -39,11 +39,11 @@ scg:> "ui/core_src" -> "ui/core"
 
 scg:> "etc/questions_src" -> "etc/questions"
 scg:> "etc/operations_src" -> "etc/operations"
-scg:> "seb/space_src" -> "seb/space"
-scg:> "seb/chemistry_src" -> "seb/chemistry"
+#scg:> "seb/space_src" -> "seb/space"
+#scg:> "seb/chemistry_src" -> "seb/chemistry"
 
 scg:> "ui/menu" -> "ui/menu"
-scg:> "seb/graph_src" -> "seb/graph"
+#scg:> "seb/graph_src" -> "seb/graph"
 
 # keynodes
 new:> "include/_keynodes.scsy"

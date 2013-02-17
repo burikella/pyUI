@@ -1,0 +1,59 @@
+$el1806={};
+"Русский язык","STRING"->$el1806;
+$el1806=c=/"Многоугольник KABCDE"/;
+$el1807={};
+"Русский язык","STRING"->$el1807;
+$el1807=c=/"Многоугольник(K; A; B; C; D; E)"/;
+$el1808={};
+"Русский язык","STRING"->$el1808;
+$el1808=c=/"Многоугольник, вершинами которого являются Точка K, Точка A, Точка B, Точка C, Точка D, Точка E"/;
+"синонимы(Многоугольник KABCDE)"={
+  "oсновной_":$el1806,
+  $el1807,
+  $el1808
+};
+"синонимы*"->"синонимы(Многоугольник KABCDE)";
+$con1809={
+  1_:"синонимы(Многоугольник KABCDE)",
+  2_:"Многоугольник KABCDE" 
+};
+"идентификация*"->$con1809;
+stype_sheaf->"синонимы(Многоугольник KABCDE)";
+stype_sheaf->$con1809;
+$set1811={};
+$set1811->"Факт.утв.(Многоугольник KABCDE)";
+$con1810={
+  1_:$set1811,
+  2_:"Многоугольник KABCDE"
+};
+
+"утверждение*"->$con1810;
+stype_sheaf->$con1810;
+stype_sheaf->$set1811;
+"многоугольник"->"Многоугольник KABCDE";
+"многоугольник"={ "пример_": "Многоугольник KABCDE" };
+
+"выпуклый многоугольник"={ "пример_": "Многоугольник KABCDE" };
+
+"геометрическая фигура"={ "пример_": "Многоугольник KABCDE" };
+
+"планарная фигура"={ "пример_": "Многоугольник KABCDE" };
+
+$el1813={};
+$el1813=c=/"<i>KABCDE</i> \ni <i>многоугольник</i> ; <i>K</i> , <i>A</i> , <i>B</i> , <i>C</i> , <i>D</i> , <i>E</i> \ni <i>геометрическая точка</i> ; < <i>KABCDE</i> , <i>K</i> >, < <i>KABCDE</i> , <i>A</i> >, < <i>KABCDE</i> , <i>B</i> > , < <i>KABCDE</i> , <i>C</i> > , < <i>KABCDE</i> , <i>D</i> > , < <i>KABCDE</i> , <i>E</i> > \ni <i>вершина*</i> ; <i>k</i> , <i>a</i> , <i>b</i> , <i>c</i> , <i>d</i> , <i>e</i> \ni <i>отрезок</i> ; < <i>KABCDE</i> , <i>k</i> >, < <i>KABCDE</i> , <i>a</i> >, < <i>KABCDE</i> , <i>b</i> > ,< <i>KABCDE</i> , <i>c</i> > ,< <i>KABCDE</i> , <i>d</i> >,< <i>KABCDE</i> , <i>e</i> > \ni <i>сторона*</i> ; {<i>b</i> , <i>e</i> } \ni <i>конгруэнтность*</i> ; {<i>a</i> , <i>k</i> } \ni <i>конгруэнтность*</i> ; {<i>k</i> , <i>d</i> } \ni <i>конгруэнтность*</i> ; {<i>d</i> , <i>c</i> } \ni <i>конгруэнтность*</i> ; < <i>a</i> , <i>A</i> >, < <i>a</i> , <i>K</i> >, < <i>b</i> , <i>B</i> >, < <i>b</i> , <i>A</i> >, < <i>c</i> , <i>C</i> >, < <i>c</i> , <i>B</i> >,< <i>d</i> , <i>D</i> >, < <i>d</i> , <i>C</i> >,< <i>e</i> , <i>E</i> >,< <i>e</i> , <i>D</i> >,< <i>k</i> , <i>K</i> >,< <i>k</i> , <i>E</i> > \ni <i>граничная точка*</i> < <i>k</i> , <i>K</i> >, < <i>a</i> , <i>K</i> >, < <i>a</i> , <i>A</i> >, < <i>b</i> , <i>A</i> >, < <i>b</i> , <i>B</i> >, < <i>c</i> , <i>B</i> >, < <i>c</i> , <i>C</i> >, < <i>d</i> , <i>C</i> > , < <i>d</i> , <i>D</i> >, < <i>e</i> , <i>D</i> >, < <i>e</i> , <i>E</i> >, < <i>k</i> , <i>E</i> > \ni <i>граничная точка*</i> ; <math>\alpha</math>, <math>\beta</math>, <math>\gamma</math>, <math>\sigma</math>, <math>\epsilon</math>, <math>\eta</math> \ni <i>угол</i> ; < <i>KABCDE</i> , <math>\alpha</math> >, < <i>KABCDE</i> , <math>\beta</math> >, < <i>KABCDE</i> , <math>\gamma</math> >, < <i>KABCDE</i> , <math>\sigma</math> >, < <i>KABCDE</i> , <math>\epsilon</math> >, < <i>KABCDE</i> , <math>\eta</math> > \ni <i>внутренний угол*</i> ; {<math>\alpha</math>, <math>\sigma</math> } \ni <i>конгруэнтность*</i> ; {<math>\beta</math>, <math>\gamma</math> } \ni <i>конгруэнтность*</i> ; {<math>\gamma</math>, <math>\epsilon</math> } \ni <i>конгруэнтность*</i> ; {<math>\epsilon</math>, <math>\eta</math> } \ni <i>конгруэнтность*</i> ."/;
+"Русский язык","STRING"->$el1813;
+$el1814={};
+$el1814=c=/"<i>KABCDE</i> - многоугольник. Геометрические точки <i>K</i> , <i>A</i> , <i>B</i> , <i>C</i> , <i>D</i> , <i>E</i> являются вершинами Многоугольника <i>KABCDE</i> . Отрезки <i>k</i> , <i>a</i> , <i>b</i> , <i>c</i> , <i>d</i> , <i>e</i> являются сторонами Многоугольника <i>KABCDE</i> . Стороны <i>b</i> , <i>e</i> равны. Стороны <i>k</i> , <i>a</i> , <i>d</i> , <i>c</i> равны. Углы <math>\alpha</math>, <math>\beta</math>, <math>\gamma</math>, <math>\sigma</math>, <math>\epsilon</math> , <math>\eta</math> являются внутренним углами Многоугольника <i>KABCDE</i> . Углы <math>\alpha</math>,<math>\sigma</math> равны. Углы <math>\beta</math>, <math>\gamma</math>, <math>\epsilon</math>, <math>\eta</math> равны. Точка <i>K</i> является граничной точкой отрезков <i>k</i> , <i>a</i> . Точка <i>A</i> является граничной точкой отрезков <i>a</i> , <i>b</i> . Точка <i>B</i> является граничной точкой отрезков <i>b</i> , <i>c</i> . Точка <i>C</i> является граничной точкой отрезков <i>c</i> , <i>d</i> . Точка <i>D</i> является граничной точкой отрезков <i>d</i> , <i>e</i> . Точка <i>E</i> является граничной точкой отрезков <i>e</i> , <i>k</i> ."/;
+"Русский язык","STRING"->$el1814;
+$con1812={
+  $el1813,
+  $el1814
+};
+
+$con1812_1={
+  1_:"Факт.утв.(Многоугольник KABCDE)",
+  2_:$con1812 
+};
+"трансляция*"->$con1812_1;
+stype_sheaf->$con1812_1;
+stype_sheaf->$con1812;

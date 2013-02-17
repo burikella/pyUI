@@ -1,0 +1,69 @@
+$el2762={};
+"Русский язык","STRING"->$el2762;
+$el2762=c=/"Отрезок AB"/;
+$el2763={};
+"Русский язык","STRING"->$el2763;
+$el2763=c=/"Отрезок(A; B)"/;
+"синонимы(Отрезок AB)"={
+  "oсновной_":$el2762,
+  $el2763
+};
+"синонимы*"->"синонимы(Отрезок AB)";
+$con2764={
+  1_:"синонимы(Отрезок AB)",
+  2_:"Отрезок AB" 
+};
+"идентификация*"->$con2764;
+stype_sheaf->"синонимы(Отрезок AB)";
+stype_sheaf->$con2764;
+$set2766={};
+$set2766->"Факт.утв.(Отрезок AB)";
+$con2765={
+  1_:$set2766,
+  2_:"Отрезок AB"
+};
+
+"утверждение*"->$con2765;
+stype_sheaf->$con2765;
+stype_sheaf->$set2766;
+"отрезок"->"Отрезок AB";
+"геометрическая фигура ограниченного размера"={ "пример_": "Отрезок AB" };
+
+"отрезок"={ "пример_": "Отрезок AB" };
+
+"геометрическая фигура"={ "пример_": "Отрезок AB" };
+
+"геометрическая фигура, имеющая граничные точки"={ "пример_": "Отрезок AB" };
+
+"геометрическая фигура, в состав которой входят все граничные точки"={ "пример_": "Отрезок AB" };
+
+"непрерывная геометрическая фигура"={ "пример_": "Отрезок AB" };
+
+"прямолинейная фигура"={ "пример_": "Отрезок AB" };
+
+"планарная фигура"={ "пример_": "Отрезок AB" };
+
+$el2768_0={};
+$el2768_0=b64/"iVBORw0KGgoAAAANSUhEUgAAALEAAAA2CAIAAAAH/u/yAAAABGdBTUEAALGPC/xhBQAAA+5JREFUeF7tm88rbGEYx42FDStNKFY2t5RCEjGKjW7TlSLK6iIpanJjRSwk6S6UuAvNVn78ARYul1IoGzYslF/JIF0LP8avcL/N6U7TuM07c6b78pzzfVZnes87z/N+n8+8z3Pe6TheX18TaFQgVAEwQaMCoQokUA4qEKYAmSAS4QqQCTJBJsiASgHuEyqF7DdOJuyXc9WKyYRKIfuNkwn75Vy1YjKhUsh+42TCfjlXrZhMqBSy3ziZsF/OVSsmEyqF7DdOJuyXc9WKyYRKIfuNkwnL5vzx8XF5eflHiE1OTp6dnSkXHImJl5eXnp6e3t7e4+Nj5Rfxho+mwM3NjcfjKSkp+Rawjo6OvLy8lpaW29vbyKFGYmJpaam0tLSiomJqagp8fLQ1M57ICoCJ9vb2tra24G0rKysFBQU7OzsmmXh4eMAOUV1d3dfX19raCgfMgSwF3jKxurqan5+/v79vkom9vT2XyzU7O7u4uFhYWHhwcCBLEUZrMFFeXv49YENDQzU1NSgid3d3JpkADWVlZUDh4uKirq6uv7+fKstSwGAiOzv7S8DcbndRUVFXV9fJyYlJJhobG9Fg+v1+zB8dHUVjEU3LKks1a0drMNHc3Pw7YPhtLywsFBcXY88ww8TR0RH4Qj/yOWBoMzMzM/EkY20RLba6t/3E09MTnj7q6+vNMDE8PIzCMT8//+uv1dbWNjU1XV5eWkw4Cy8njAl8RI9ZWVk5MDAQMxPYZDAzrIGYm5vLyclZW1szvg41CdBZWFCJS7u+vkaNCEZuMIEzia8Bw/aA66qqqsPDw5iZwLEEqs7u7m7oTDQTeC4dGRnZ2NhAK5uYmJienj42NnZ/fy9RPovFjOx0dnbi9b6kpCQcHOBXjQU+Pz9vbW3hbMmwmZmZzc3NaPL1jzMrn8+3vr4edkiFg1KcdWxvb6OIBF8tTEtLm56e/kl7VwVQ4ru7u5OTk4284GJ8fDwe6GP+vyMrKyv0dVO0op9o762A0+kMJsXhcKBkaGWioaEBXo0IMjIyUGiwedDeV4HBwcGUlBQjKbiYmJjQygRqEsoHHOfm5nq93mjqUzzxcW40Cpyfn+MwKTU1FU0e6khopxnN9LB7Yq4d6Fyurq7w3IFGBk2GCZec8j8UwIk1GsHT01PjmDEei5mJeJxxrggFyISINGkNkkxolVuEMzIhIk1agyQTWuUW4YxMiEiT1iDJhFa5RTgjEyLSpDVIMqFVbhHOyISINGkNkkxolVuEMzIhIk1agyQTWuUW4YxMiEiT1iDJhFa5RTgjEyLSpDVIMqFVbhHOyISINGkNkkxolVuEMzIhIk1agyQTWuUW4ewPlkhaQ+ZmqL8AAAAASUVORK5CYII="/;
+ui_format_png->$el2768_0;
+$con2767_0={
+  1_:"Отрезок AB",
+  2_:"$el2768_0"
+};
+
+"иллюстрация*"->$con2767_0;
+stype_sheaf->$con2767_0;
+$el2770={};
+$el2770=c=/"AB - отрезок. Геометрические точки A и B являются граничными точками отрезка AB, которые включаются в него."/;
+"Русский язык","STRING"->$el2770;
+$con2769={
+  $el2770
+};
+
+$con2769_1={
+  1_:"Факт.утв.(Отрезок AB)",
+  2_:$con2769 
+};
+"трансляция*"->$con2769_1;
+stype_sheaf->$con2769_1;
+stype_sheaf->$con2769;

@@ -1,0 +1,71 @@
+$el1935={};
+"Русский язык","STRING"->$el1935;
+$el1935=c=/"Невыпуклый многоугольник OPRSQT"/;
+$el1936={};
+"Русский язык","STRING"->$el1936;
+$el1936=c=/"Невыпуклый многоугольник(O,,P,,R,,S,,Q,,T)"/;
+$el1937={};
+"Русский язык","STRING"->$el1937;
+$el1937=c=/"Невыпуклый многоугольник, вершинами которого являются Точка O, Точка P, Точка R, Точка S, Точка Q и Точка T"/;
+"синонимы(Невыпуклый многоугольник OPRSQT)"={
+  "oсновной_":$el1935,
+  $el1936,
+  $el1937
+};
+"синонимы*"->"синонимы(Невыпуклый многоугольник OPRSQT)";
+$con1938={
+  1_:"синонимы(Невыпуклый многоугольник OPRSQT)",
+  2_:"Невыпуклый многоугольник OPRSQT" 
+};
+"идентификация*"->$con1938;
+stype_sheaf->"синонимы(Невыпуклый многоугольник OPRSQT)";
+stype_sheaf->$con1938;
+$set1940={};
+$set1940->"Факт.утв.(Невыпуклый многоугольник OPRSQT)";
+$con1939={
+  1_:$set1940,
+  2_:"Невыпуклый многоугольник OPRSQT"
+};
+
+"утверждение*"->$con1939;
+stype_sheaf->$con1939;
+stype_sheaf->$set1940;
+"невыпуклый многоугольник"->"Невыпуклый многоугольник OPRSQT";
+"геометрическая фигура ограниченного размера"={ "пример_": "Невыпуклый многоугольник OPRSQT" };
+
+"многоугольник"={ "пример_": "Невыпуклый многоугольник OPRSQT" };
+
+"невыпуклый многоугольник"={ "пример_": "Невыпуклый многоугольник OPRSQT" };
+
+"геометрическая фигура"={ "пример_": "Невыпуклый многоугольник OPRSQT" };
+
+"планарная фигура"={ "пример_": "Невыпуклый многоугольник OPRSQT" };
+
+$el1942_0={};
+$el1942_0=b64/"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"/;
+ui_format_png->$el1942_0;
+$con1941_0={
+  1_:"Невыпуклый многоугольник OPRSQT",
+  2_:"$el1942_0"
+};
+
+"иллюстрация*"->$con1941_0;
+stype_sheaf->$con1941_0;
+$el1944={};
+$el1944=c=/"<i>OPRSQT</i> \ni <i>многоугольник</i> ; <i>OPRSQT</i> \ni <i>невыпуклый многоугольник</i> ; <i>O</i> , <i>P</i> , <i>R</i> , <i>S</i> , <i>Q</i> , <i>T</i> \ni <i>геометрическая точка</i> ; < <i>OPRSQT</i> , <i>O</i> >, < <i>OPRSQT</i> , <i>P</i> >, < <i>OPRSQT</i> , <i>R</i> > , < <i>OPRSQT</i> , <i>S</i> > , < <i>OPRSQT</i> , <i>Q</i> > , < <i>OPRSQT</i> , <i>T</i> > \ni <i>вершина*</i> ; <i>o</i> , <i>p</i> , <i>r</i> , <i>s</i> , <i>q</i> , <i>t</i> \ni <i>отрезок</i> ; < <i>OPRSQT</i> , <i>o</i> >, < <i>OPRSQT</i> , <i>p</i> >, < <i>OPRSQT</i> , <i>r</i> > ,< <i>OPRSQT</i> , <i>s</i> > ,< <i>OPRSQT</i> , <i>q</i> >,< <i>OPRSQT</i> , <i>t</i> > \ni <i>сторона*</i> ; < <i>o</i> , <i>O</i> >, < <i>o</i> , <i>T</i> >, < <i>p</i> , <i>P</i> >, < <i>p</i> , <i>O</i> >, < <i>r</i> , <i>R</i> >, < <i>r</i> , <i>P</i> >,< <i>s</i> , <i>S</i> >, < <i>s</i> , <i>R</i> >,< <i>q</i> , <i>Q</i> >,< <i>q</i> , <i>S</i> >,< <i>t</i> , <i>T</i> >,< <i>t</i> , <i>Q</i> > \ni <i>граничная точка*</i> ; <math>\alpha</math>, <math>\beta</math>, <math>\gamma</math>, <math>\sigma</math>, <math>\epsilon</math>, <math>\eta</math> \ni <i>угол</i> ; < <i>OPRSQT</i> , <math>\alpha</math> >, < <i>OPRSQT</i> , <math>\beta</math> >, < <i>OPRSQT</i> , <math>\gamma</math> >, < <i>OPRSQT</i> , <math>\sigma</math> >, < <i>OPRSQT</i> , <math>\epsilon</math> >, < <i>OPRSQT</i> , <math>\eta</math> > \ni <i>внутренний угол*</i> ."/;
+"Русский язык","STRING"->$el1944;
+$el1945={};
+$el1945=c=/"<i>OPRSQT</i> - невыпуклый многоугольник. Геометрические точки <i>O</i> , <i>P</i> , <i>R</i> , <i>S</i> , <i>Q</i> , <i>T</i> являются вершинами Многоугольника <i>OPRSQT</i> . Отрезки <i>o</i> , <i>p</i> , <i>r</i> , <i>s</i> , <i>q</i> , <i>t</i> являются сторонами Многоугольника <i>OPRSQT</i> . Углы <math>\alpha</math>, <math>\beta</math>, <math>\gamma</math>, <math>\sigma</math>, <math>\epsilon</math> и <math>\eta</math> являются внутренним углами Многоугольника <i>OPRSQT</i> . Точка <i>O</i> является граничной точкой отрезков <i>o</i> , <i>p</i> . Точка <i>P</i> является граничной точкой отрезков <i>p</i> , <i>r</i> . Точка <i>R</i> является граничной точкой отрезков <i>r</i> , <i>s</i> . Точка <i>S</i> является граничной точкой отрезков <i>s</i> , <i>q</i> . Точка <i>Q</i> является граничной точкой отрезков <i>q</i> , <i>t</i> . Точка <i>T</i> является граничной точкой отрезков <i>t</i> , <i>o</i> ."/;
+"Русский язык","STRING"->$el1945;
+$con1943={
+  $el1944,
+  $el1945
+};
+
+$con1943_1={
+  1_:"Факт.утв.(Невыпуклый многоугольник OPRSQT)",
+  2_:$con1943 
+};
+"трансляция*"->$con1943_1;
+stype_sheaf->$con1943_1;
+stype_sheaf->$con1943;

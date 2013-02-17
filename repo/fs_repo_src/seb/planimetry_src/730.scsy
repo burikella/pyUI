@@ -1,0 +1,123 @@
+$el5895={};
+"Русский язык","STRING"->$el5895;
+$el5895=c=/"центральный угол*"/;
+$el5896={};
+"Русский язык","STRING"->$el5896;
+$el5896=c=/"быть центральным углом*"/;
+$el5897={};
+"Русский язык","STRING"->$el5897;
+$el5897=c=/"центральный угол в окружности*"/;
+$el5898={};
+"Русский язык","STRING"->$el5898;
+$el5898=c=/"быть центральным углом в окружности*"/;
+"синонимы(центральный угол*)"={
+  "oсновной_":$el5895,
+  $el5896,
+  $el5897,
+  $el5898
+};
+"синонимы*"->"синонимы(центральный угол*)";
+$con5899={
+  1_:"синонимы(центральный угол*)",
+  2_:"центральный угол*" 
+};
+"идентификация*"->$con5899;
+stype_sheaf->"синонимы(центральный угол*)";
+stype_sheaf->$con5899;
+"Предметная область Геометрии Евклида"={ "понятия X-го логического уровня_": "центральный угол*" };
+$set5901={};
+$set5901->"Утв.(дуга; окружность; центральный угол*)";
+$con5900={
+  1_:$set5901,
+  2_:"центральный угол*"
+};
+
+"утверждение*"->$con5900;
+stype_sheaf->$con5900;
+stype_sheaf->$set5901;
+"бинарное отношение"->"центральный угол*";
+"ориентированное отношение"->"центральный угол*";
+$con5902_0={
+  1_:"центральный угол*",
+  2_:"Опр.(центральный угол*)"
+};
+
+"определение*"->$con5902_0;
+stype_sheaf->$con5902_0;
+$el5904_0={};
+$el5904_0=b64/"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"/;
+ui_format_png->$el5904_0;
+$con5903_0={
+  1_:"центральный угол*",
+  2_:"$el5904_0"
+};
+
+"иллюстрация*"->$con5903_0;
+stype_sheaf->$con5903_0;
+$set5906={};
+
+$set5906->"окружность_";
+$set5906->"центральный угол_";
+$con5905={
+  1_:"центральный угол*",
+  2_:$set5906
+};
+
+"схема отношения*"->$con5905;
+stype_sheaf->$con5905;
+stype_sheaf->$set5906;
+$con5907_0={
+  1_:"центральный угол*",
+  2_:"окружность"
+};
+
+"домен*"->$con5907_0;
+stype_sheaf->$con5907_0;
+$con5908_0={
+  1_:"центральный угол*",
+  2_:"окружность"
+};
+
+"область определения*"->$con5908_0;
+stype_sheaf->$con5908_0;
+$el5910={};
+$el5910=c=/"Планарный угол, вершиной которого является центр окружности."/;
+"Русский язык","STRING"->$el5910;
+$con5909={
+  $el5910
+};
+
+$con5909_1={
+  1_:"Опр.(центральный угол*)",
+  2_:$con5909 
+};
+"трансляция*"->$con5909_1;
+stype_sheaf->$con5909_1;
+stype_sheaf->$con5909;
+$set5912={};
+$set5912->"планарный угол";
+$set5912->"окружность";
+$set5912->"вершина*";
+$set5912->"центр*";
+$con5911={
+  1_:"Опр.(центральный угол*)",
+  2_:$set5912
+};
+
+"используемые константы*"->$con5911;
+stype_sheaf->$con5911;
+stype_sheaf->$set5912;
+$el5914={};
+$el5914=c=/"Угловая величина дуги окружности равна величине центрального угла, который опирается на данную дугу."/;
+"Русский язык","STRING"->$el5914;
+$con5913={
+  $el5914
+};
+
+$con5913_1={
+  1_:"Утв.(дуга; окружность; центральный угол*)",
+  2_:$con5913 
+};
+"трансляция*"->$con5913_1;
+stype_sheaf->$con5913_1;
+stype_sheaf->$con5913;

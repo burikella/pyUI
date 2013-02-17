@@ -1,0 +1,49 @@
+$set1301={};
+$set1301->"Факт.утв.(Круг (O; R))";
+$con1300={
+  1_:$set1301,
+  2_:"Круг(O; R)"
+};
+
+"утверждение*"->$con1300;
+stype_sheaf->$con1300;
+stype_sheaf->$set1301;
+"круг"->"Круг(O; R)";
+"геометрическая фигура"={ "пример_": "Круг(O; R)" };
+
+"геометрическая фигура ограниченного размера"={ "пример_": "Круг(O; R)" };
+
+"геометрическая фигура, имеющая граничные точки"={ "пример_": "Круг(O; R)" };
+
+"геометрическая фигура, в состав которой входят все граничные точки"={ "пример_": "Круг(O; R)" };
+
+"непрерывная геометрическая фигура"={ "пример_": "Круг(O; R)" };
+
+"круг"={ "пример_": "Круг(O; R)" };
+
+"планарная фигура"={ "пример_": "Круг(O; R)" };
+
+$el1303_0={};
+$el1303_0=b64/"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"/;
+ui_format_png->$el1303_0;
+$con1302_0={
+  1_:"Круг(O; R)",
+  2_:"$el1303_0"
+};
+
+"иллюстрация*"->$con1302_0;
+stype_sheaf->$con1302_0;
+$el1305={};
+$el1305=c=/"(O; R) - круг. (O; R1) - окружность, которая является границей круга (O; R). Геометрическая точка O является центром круга (O; R) и окружности (O; R1). Отрезок R является радиусом круга (O; R). Отрезок R1 является радиусом окружности (O; R1). Отрезки R и R1 конгруэнтны."/;
+"Русский язык","STRING"->$el1305;
+$con1304={
+  $el1305
+};
+
+$con1304_1={
+  1_:"Факт.утв.(Круг (O; R))",
+  2_:$con1304 
+};
+"трансляция*"->$con1304_1;
+stype_sheaf->$con1304_1;
+stype_sheaf->$con1304;

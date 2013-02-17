@@ -1,0 +1,131 @@
+$el280={};
+"Русский язык","STRING"->$el280;
+$el280=c=/"внутренние односторонние углы*"/;
+$el281={};
+"Русский язык","STRING"->$el281;
+$el281=c=/"быть внутренними односторонними углами*"/;
+"синонимы(внутренние односторонние углы*)"={
+  "oсновной_":$el280,
+  $el281
+};
+"синонимы*"->"синонимы(внутренние односторонние углы*)";
+$con282={
+  1_:"синонимы(внутренние односторонние углы*)",
+  2_:"внутренние односторонние углы*" 
+};
+"идентификация*"->$con282;
+stype_sheaf->"синонимы(внутренние односторонние углы*)";
+stype_sheaf->$con282;
+"Предметная область Геометрии Евклида"={ "понятия Х-го логического уровня_": "внутренние односторонние углы*" };
+$set284={};
+$set284->"Утв.(соответственные углы*; пересекающиеся прямые*; конгруэнтность*; односторонние углы*; сумма*; мера угла*)";
+$set284->"Утв.(накрест лежащие углы*; пересекающиеся прямые*; конгруэнтность*; внутренние односторонние углы*; сумма*; мера угла*)";
+$con283={
+  1_:$set284,
+  2_:"внутренние односторонние углы*"
+};
+
+"утверждение*"->$con283;
+stype_sheaf->$con283;
+stype_sheaf->$set284;
+"отношение"->"внутренние односторонние углы*";
+"бинарное отношение"->"внутренние односторонние углы*";
+"неориентированное отношение"->"внутренние односторонние углы*";
+$con285_0={
+  1_:"внутренние односторонние углы*",
+  2_:"Опр.(внутренние односторонние углы*)"
+};
+
+"определение*"->$con285_0;
+stype_sheaf->$con285_0;
+$el287_0={};
+$el287_0=b64/"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"/;
+ui_format_png->$el287_0;
+$con286_0={
+  1_:"внутренние односторонние углы*",
+  2_:"$el287_0"
+};
+
+"иллюстрация*"->$con286_0;
+stype_sheaf->$con286_0;
+$set289={};
+
+$set289->"угол_";
+$set289->"угол_";
+$con288={
+  1_:"внутренние односторонние углы*",
+  2_:$set289
+};
+
+"схема отношения*"->$con288;
+stype_sheaf->$con288;
+stype_sheaf->$set289;
+$con290_0={
+  1_:"внутренние односторонние углы*",
+  2_:"планарный угол \cup двугранный угол"
+};
+
+"домен*"->$con290_0;
+stype_sheaf->$con290_0;
+$con291_0={
+  1_:"внутренние односторонние углы*",
+  2_:"планарный угол \cup двугранный угол"
+};
+
+"область определения*"->$con291_0;
+stype_sheaf->$con291_0;
+$el293={};
+$el293=c=/"Внутренними односторонними называются углы, образованные при пересечении двух прямых секущей, лежащие по одну сторону от секущей между прямыми."/;
+"Русский язык","STRING"->$el293;
+$con292={
+  $el293
+};
+
+$con292_1={
+  1_:"Опр.(внутренние односторонние углы*)",
+  2_:$con292 
+};
+"трансляция*"->$con292_1;
+stype_sheaf->$con292_1;
+stype_sheaf->$con292;
+$set295={};
+$set295->"угол";
+$set295->"пересекающиеся прямые*";
+$set295->"секущая*";
+$set295->"между_";
+$con294={
+  1_:"Опр.(внутренние односторонние углы*)",
+  2_:$set295
+};
+
+"используемые константы*"->$con294;
+stype_sheaf->$con294;
+stype_sheaf->$set295;
+$el297={};
+$el297=c=/"Если при пересечении двух прямых третьей прямой сумма пары односторонних углов равна 180 градусов, то соответственные углы равны."/;
+"Русский язык","STRING"->$el297;
+$con296={
+  $el297
+};
+
+$con296_1={
+  1_:"Утв.(соответственные углы*; пересекающиеся прямые*; конгруэнтность*; односторонние углы*; сумма*; мера угла*)",
+  2_:$con296 
+};
+"трансляция*"->$con296_1;
+stype_sheaf->$con296_1;
+stype_sheaf->$con296;
+$el299={};
+$el299=c=/"Если при пересечении двух прямых третьей прямой сумма пары внутренних односторонних углов равна 180 градусов, то накрест лежащие углы равны."/;
+"Русский язык","STRING"->$el299;
+$con298={
+  $el299
+};
+
+$con298_1={
+  1_:"Утв.(накрест лежащие углы*; пересекающиеся прямые*; конгруэнтность*; внутренние односторонние углы*; сумма*; мера угла*)",
+  2_:$con298 
+};
+"трансляция*"->$con298_1;
+stype_sheaf->$con298_1;
+stype_sheaf->$con298;

@@ -1,0 +1,75 @@
+$el4429={};
+"Русский язык","STRING"->$el4429;
+$el4429=c=/"Ромб EFGH"/;
+$el4430={};
+"Русский язык","STRING"->$el4430;
+$el4430=c=/"Ромб(E; F; G; H)"/;
+$el4431={};
+"Русский язык","STRING"->$el4431;
+$el4431=c=/"Ромб, вершинами которого являются Точка E, Точка F, Точка G и Точка H"/;
+"синонимы(Ромб EFGH)"={
+  "oсновной_":$el4429,
+  $el4430,
+  $el4431
+};
+"синонимы*"->"синонимы(Ромб EFGH)";
+$con4432={
+  1_:"синонимы(Ромб EFGH)",
+  2_:"Ромб EFGH" 
+};
+"идентификация*"->$con4432;
+stype_sheaf->"синонимы(Ромб EFGH)";
+stype_sheaf->$con4432;
+$set4434={};
+$set4434->"Факт. утв.(Ромб EFGH)";
+$con4433={
+  1_:$set4434,
+  2_:"Ромб EFGH"
+};
+
+"утверждение*"->$con4433;
+stype_sheaf->$con4433;
+stype_sheaf->$set4434;
+"ромб"->"Ромб EFGH";
+"геометрическая фигура ограниченного размера"={ "пример_": "Ромб EFGH" };
+
+"ромб"={ "пример_": "Ромб EFGH" };
+
+"четырехугольник"={ "пример_": "Ромб EFGH" };
+
+"многоугольник"={ "пример_": "Ромб EFGH" };
+
+"выпуклый многоугольник"={ "пример_": "Ромб EFGH" };
+
+"геометрическая фигура"={ "пример_": "Ромб EFGH" };
+
+"планарная фигура"={ "пример_": "Ромб EFGH" };
+
+$el4436_0={};
+$el4436_0=b64/"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"/;
+ui_format_png->$el4436_0;
+$con4435_0={
+  1_:"Ромб EFGH",
+  2_:"$el4436_0"
+};
+
+"иллюстрация*"->$con4435_0;
+stype_sheaf->$con4435_0;
+$el4438={};
+$el4438=c=/"<i>EFGH</i> \ni <i>ромб</i> ; <i>E</i> , <i>F</i> , <i>G</i> , <i>H</i> \ni <i>геометрическая точка</i> ; < <i>EFGH</i> , <i>E</i> >, < <i>EFGH</i> , <i>F</i> >, < <i>EFGH</i> , <i>G</i> >, < <i>EFGH</i> , <i>H</i> > \ni <i>вершина*</i> ; <i>e</i> , <i>f</i> , <i>g</i> , <i>h</i> \ni <i>отрезок</i> ; <i>E</i> \ni <i>e</i> ; <i>E</i> \ni <i>f</i> ; <i>F</i> \ni <i>f</i> ; <i>F</i> \ni <i>g</i> ; <i>G</i> \ni <i>g</i> ; <i>G</i> \ni <i>h</i> ; <i>H</i> \ni <i>h</i> ; <i>H</i> \ni <i>e</i> ; < <i>EFGH</i> , <i>e</i> >, < <i>EFGH</i> , <i>f</i> >, < <i>EFGH</i> , <i>g</i> >, < <i>EFGH</i> , <i>h</i> > \ni <i>сторона*</i> ; < <i>f</i> , <i>F</i> >, < <i>f</i> , <i>E</i> >, < <i>g</i> , <i>F</i> >, < <i>g</i> , <i>G</i> >, < <i>h</i> , <i>G</i> >, < <i>h</i> , <i>H</i> >, < <i>e</i> , <i>E</i> >, < <i>e</i> , <i>H</i> > \ni <i>граничная точка*</i> ; <math>\alpha</math>, <math>\beta</math>, <math>\gamma</math>, <math>\sigma</math> \ni <i>угол</i> ; < <i>EFGH</i> , <math>\alpha</math> >, < <i>EFGH</i> , <math>\beta</math> >, < <i>EFGH</i> , <math>\gamma</math> >, < <i>EFGH</i> , <math>\sigma</math> > \ni <i>внутренний угол*</i> ."/;
+"Русский язык","STRING"->$el4438;
+$el4439={};
+$el4439=c=/"Геометрические точки <i>E</i> , <i>F</i> , <i>G</i> и <i>H</i> являются вершинами Ромба <i>EFGH</i> . Отрезки <i>e</i> , <i>f</i> , <i>g</i> и <i>h</i> являются сторонами Ромба <i>EFGH</i> . Углы <math>\alpha</math>, <math>\beta</math>, <math>\gamma</math>, <math>\sigma</math> являются внутренним углами Ромба <i>EFGH</i> . Точка <i>E</i> является граничной точкой отрезков <i>e</i> , <i>f</i> . Точка <i>F</i> является граничной точкой отрезков <i>f</i> , <i>g</i> . Точка <i>G</i> является граничной точкой отрезков <i>h</i> , <i>g</i> . Точка <i>H</i> является граничной точкой отрезков <i>e</i> , <i>h</i> ."/;
+"Русский язык","STRING"->$el4439;
+$con4437={
+  $el4438,
+  $el4439
+};
+
+$con4437_1={
+  1_:"Факт. утв.(Ромб EFGH)",
+  2_:$con4437 
+};
+"трансляция*"->$con4437_1;
+stype_sheaf->$con4437_1;
+stype_sheaf->$con4437;

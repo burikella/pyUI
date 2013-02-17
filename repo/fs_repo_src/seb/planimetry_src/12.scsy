@@ -1,0 +1,25 @@
+$el63={};
+$el63=c=/"Если из трех точек одна лежит между двумя другими, то все три данные точки являются прямолинейными."/;
+"Русский язык","STRING"->$el63;
+$con62={
+  $el63
+};
+
+$con62_1={
+  1_:"Акс.(тройка точек; прямолинейная тройка точек; между_)",
+  2_:$con62 
+};
+"трансляция*"->$con62_1;
+stype_sheaf->$con62_1;
+stype_sheaf->$con62;
+$el65_0={};
+$el65_0=b64/"iVBORw0KGgoAAAANSUhEUgAAALEAAAAaCAIAAAB3kCq/AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAOwQAADsEBuJFr7QAABRtJREFUaEPtWlkobVEYNmRWEhIZHiieSCQZUkIyFlGEF4pMJSRTiTIklAwJhYhk6IYyy4P5gWQWmZJ5Hq/pfrVL4mJf1tp7n+7ZT6dz9v7Xv7/1rX/4/iP5/PwsQe6Ctfv7+7m5OQUFBV1dXUVFRUlJSXLmubCEV7i6upqfn1dTU9PT05ORkeFiVXZrPD4+Hh8fb29va2trq6urS0tLs3vuH+8CBL/JXWtra4GBgXJycoAyKChoYWGBnG2OLOEVTExMgKKysnJ0dPT19TVHC3+1zOnpaW1trZaWFnwzMDCoqqq6u7v76qG///709IR9/+iSuLm5+UXuCgsL09DQYGgJFiclJbW1tZEzT91Sc3NzQEDAy7HCWczIyKC+KrsFysrKzMzMXuKuubk5KMLu0bd3bWxsIJx/yImRkRGcbFKXqamprKwsg6mUlJSVlZW/vz8p4xzYgbeGhoYvnEAGtLe352BdNku4u7urqqoyvoEZmpqaHh4ebB58f091dTWizoec+CSGfOOn1tZW8AC0kJeXNzY2HhgYQAr8hh2+HsHpqaurY1K1kpKStbX10tISX868WRdlREREhIqKCvIyap3w8PDz83MavkmQNQr21dfXe3t7+/r6Ig5/Qkay6xK0dnZ2lpOT4+TkFBwc3NvbS9DyD009PDwsLi4mJia6uroiKaMK/qFBjuIEJS/FZrlEgHCc4NJ18VqUEBBzghKwImyWDCfQBR8cHFxcXAAJaBKDg4N7e3uiiAoq4vX1dXiOD1tbW93d3cIpiaCUoIeEbygtR0dHx8fHKSFMhhNjY2OVlZVM1VNQUODi4jI0NETJY3pmwQO8SEpKCiQdyEE9PT2o5gTSd4CajY2NxcXFeP3V1dXY2Njk5OTPpadvA0WGE3l5eZB6Jicn4UdWVpatrW1fX9+3feLrQTSi6enplpaWwBpFPqCvqamBlsyXP6/XBTWdnZ2joqLgG1zq6upCMKbkGAFOYLoBQkCWyM7OBo6vOQHvOzo6EDOYtCLwCwHZx8cHMw5IFFNTU5ubm5BbhJA7kCzKy8shYkKk6uzsRFIDpAhplPAkwAlA6enpaWFhER8fPzMz88KJo6Oj0tJS0KWlpUUkOAGg3dzcdHR08vPz8VI4izY2NsvLy5SgZ28WRys3NxecQKiAnj09PR0XF5eamirc3IH9Rsj18/ODwoM6iOFEU1MTkh8IgVGNQMLvl3sA56EFgdwokC8vLzGpwagJUfDLB2nfgEQ2MTFhZ2eHcRLAXFlZwYeYmBjhcgKIvKknMJ6BjolDhrGNEGIvyz17XU+gxhQOJ5huDpxg6gmR5IS+vj60YVQYiHj7+/sst4T328ScYLaAQD3xPk5gOlpRUYGpAeoMdHQ4c7zvNxsHxJygyAmmF93Z2UHaw6AWsY7NlvB+j5gTJDlRUlKCsXJISAgkite9KKp3Ly8vfCMSGQSlXENDA8bQCQkJ7e3tgqonoK6iTzYyMoIkCFRFoMaEolJYWAgoIbjiPz1oQ2ZnZ0E6ZA30HZmZmWipeQ8DbBwAd9HmQcpEnENZl5aWJpCmCUgODw9HRkbi+EE7EQFOIOqenJzs7u6inUNritnH7e0tswf4OwJaOwxE2GwJ7/egqofzTC8Knw8PD4XznyD4A4TBUUgmIsAJ3vfy/3EAkayoqMjBwUHQmtX/sx+8vylCRX9/v6OjY2hoKCRjSv6Q6UUpOSc2+x4B0ALpGKkNFTElfMScoASsCJv9A51QD4lbx9jYAAAAAElFTkSuQmCC"/;
+ui_format_png->$el65_0;
+$con64_0={
+  1_:"Акс.(тройка точек; прямолинейная тройка точек; между_)",
+  2_:"$el65_0"
+};
+
+"иллюстрация*"->$con64_0;
+stype_sheaf->$con64_0;
+"Предметная область Геометрии Евклида"={ "утверждения 0-го логического уровня_": "Акс.(тройка точек; прямолинейная тройка точек; между_)" };

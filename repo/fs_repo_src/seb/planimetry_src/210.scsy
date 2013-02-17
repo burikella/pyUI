@@ -1,0 +1,25 @@
+$el2404={};
+$el2404=c=/"Лучом называют геометрическую фигуру, для которой существует две точки такие, что одна из точек не принадлежит фигуре, а вторая - принадлежит и лежит между точкой, не принадлежащей фигуре, и любой другой точкой, принадлежащей фигуре."/;
+"Русский язык","STRING"->$el2404;
+$con2403={
+  $el2404
+};
+
+$con2403_1={
+  1_:"Опр.(луч)",
+  2_:$con2403 
+};
+"трансляция*"->$con2403_1;
+stype_sheaf->$con2403_1;
+stype_sheaf->$con2403;
+$el2406_0={};
+$el2406_0=b64/"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"/;
+ui_format_png->$el2406_0;
+$con2405_0={
+  1_:"Опр.(луч)",
+  2_:"$el2406_0"
+};
+
+"иллюстрация*"->$con2405_0;
+stype_sheaf->$con2405_0;
+"Предметная область Геометрии Евклида"={ "утверждения_": "Опр.(луч)" };

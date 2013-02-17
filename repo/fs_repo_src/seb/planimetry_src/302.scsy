@@ -1,0 +1,79 @@
+$el2619={};
+"Русский язык","STRING"->$el2619;
+$el2619=c=/"Остроугольный треугольник OST"/;
+$el2620={};
+"Русский язык","STRING"->$el2620;
+$el2620=c=/"Тр-к(O; S; T)"/;
+$el2621={};
+"Русский язык","STRING"->$el2621;
+$el2621=c=/"Остроугольный треугольник(O; S; T)"/;
+$el2622={};
+"Русский язык","STRING"->$el2622;
+$el2622=c=/"Треугольник, вершинами которого являются Точка O, Точка S, Точка T"/;
+"синонимы(Остроугольный треугольник OST)"={
+  "oсновной_":$el2619,
+  $el2620,
+  $el2621,
+  $el2622
+};
+"синонимы*"->"синонимы(Остроугольный треугольник OST)";
+$con2623={
+  1_:"синонимы(Остроугольный треугольник OST)",
+  2_:"Остроугольный треугольник OST" 
+};
+"идентификация*"->$con2623;
+stype_sheaf->"синонимы(Остроугольный треугольник OST)";
+stype_sheaf->$con2623;
+$set2625={};
+$set2625->"Факт.утв.(Остроугольный треугольник OST)";
+$con2624={
+  1_:$set2625,
+  2_:"Остроугольный треугольник OST"
+};
+
+"утверждение*"->$con2624;
+stype_sheaf->$con2624;
+stype_sheaf->$set2625;
+"остроугольный треугольник"->"Остроугольный треугольник OST";
+"геометрическая фигура ограниченного размера"={ "пример_": "Остроугольный треугольник OST" };
+
+"остроугольный треугольник"={ "пример_": "Остроугольный треугольник OST" };
+
+"треугольник"={ "пример_": "Остроугольный треугольник OST" };
+
+"многоугольник"={ "пример_": "Остроугольный треугольник OST" };
+
+"выпуклый многоугольник"={ "пример_": "Остроугольный треугольник OST" };
+
+"геометрическая фигура"={ "пример_": "Остроугольный треугольник OST" };
+
+"планарная фигура"={ "пример_": "Остроугольный треугольник OST" };
+
+$el2627_0={};
+$el2627_0=b64/"iVBORw0KGgoAAAANSUhEUgAAAMgAAACWCAIAAAAUvlBOAAAACXBIWXMAAAsTAAALEwEAmpwYAAAKTWlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVN3WJP3Fj7f92UPVkLY8LGXbIEAIiOsCMgQWaIQkgBhhBASQMWFiApWFBURnEhVxILVCkidiOKgKLhnQYqIWotVXDjuH9yntX167+3t+9f7vOec5/zOec8PgBESJpHmomoAOVKFPDrYH49PSMTJvYACFUjgBCAQ5svCZwXFAADwA3l4fnSwP/wBr28AAgBw1S4kEsfh/4O6UCZXACCRAOAiEucLAZBSAMguVMgUAMgYALBTs2QKAJQAAGx5fEIiAKoNAOz0ST4FANipk9wXANiiHKkIAI0BAJkoRyQCQLsAYFWBUiwCwMIAoKxAIi4EwK4BgFm2MkcCgL0FAHaOWJAPQGAAgJlCLMwAIDgCAEMeE80DIEwDoDDSv+CpX3CFuEgBAMDLlc2XS9IzFLiV0Bp38vDg4iHiwmyxQmEXKRBmCeQinJebIxNI5wNMzgwAABr50cH+OD+Q5+bk4eZm52zv9MWi/mvwbyI+IfHf/ryMAgQAEE7P79pf5eXWA3DHAbB1v2upWwDaVgBo3/ldM9sJoFoK0Hr5i3k4/EAenqFQyDwdHAoLC+0lYqG9MOOLPv8z4W/gi372/EAe/tt68ABxmkCZrcCjg/1xYW52rlKO58sEQjFu9+cj/seFf/2OKdHiNLFcLBWK8ViJuFAiTcd5uVKRRCHJleIS6X8y8R+W/QmTdw0ArIZPwE62B7XLbMB+7gECiw5Y0nYAQH7zLYwaC5EAEGc0Mnn3AACTv/mPQCsBAM2XpOMAALzoGFyolBdMxggAAESggSqwQQcMwRSswA6cwR28wBcCYQZEQAwkwDwQQgbkgBwKoRiWQRlUwDrYBLWwAxqgEZrhELTBMTgN5+ASXIHrcBcGYBiewhi8hgkEQcgIE2EhOogRYo7YIs4IF5mOBCJhSDSSgKQg6YgUUSLFyHKkAqlCapFdSCPyLXIUOY1cQPqQ28ggMor8irxHMZSBslED1AJ1QLmoHxqKxqBz0XQ0D12AlqJr0Rq0Hj2AtqKn0UvodXQAfYqOY4DRMQ5mjNlhXIyHRWCJWBomxxZj5Vg1Vo81Yx1YN3YVG8CeYe8IJAKLgBPsCF6EEMJsgpCQR1hMWEOoJewjtBK6CFcJg4Qxwicik6hPtCV6EvnEeGI6sZBYRqwm7iEeIZ4lXicOE1+TSCQOyZLkTgohJZAySQtJa0jbSC2kU6Q+0hBpnEwm65Btyd7kCLKArCCXkbeQD5BPkvvJw+S3FDrFiOJMCaIkUqSUEko1ZT/lBKWfMkKZoKpRzame1AiqiDqfWkltoHZQL1OHqRM0dZolzZsWQ8ukLaPV0JppZ2n3aC/pdLoJ3YMeRZfQl9Jr6Afp5+mD9HcMDYYNg8dIYigZaxl7GacYtxkvmUymBdOXmchUMNcyG5lnmA+Yb1VYKvYqfBWRyhKVOpVWlX6V56pUVXNVP9V5qgtUq1UPq15WfaZGVbNQ46kJ1Bar1akdVbupNq7OUndSj1DPUV+jvl/9gvpjDbKGhUaghkijVGO3xhmNIRbGMmXxWELWclYD6yxrmE1iW7L57Ex2Bfsbdi97TFNDc6pmrGaRZp3mcc0BDsax4PA52ZxKziHODc57LQMtPy2x1mqtZq1+rTfaetq+2mLtcu0W7eva73VwnUCdLJ31Om0693UJuja6UbqFutt1z+o+02PreekJ9cr1Dund0Uf1bfSj9Rfq79bv0R83MDQINpAZbDE4Y/DMkGPoa5hpuNHwhOGoEctoupHEaKPRSaMnuCbuh2fjNXgXPmasbxxirDTeZdxrPGFiaTLbpMSkxeS+Kc2Ua5pmutG003TMzMgs3KzYrMnsjjnVnGueYb7ZvNv8jYWlRZzFSos2i8eW2pZ8ywWWTZb3rJhWPlZ5VvVW16xJ1lzrLOtt1ldsUBtXmwybOpvLtqitm63Edptt3xTiFI8p0in1U27aMez87ArsmuwG7Tn2YfYl9m32zx3MHBId1jt0O3xydHXMdmxwvOuk4TTDqcSpw+lXZxtnoXOd8zUXpkuQyxKXdpcXU22niqdun3rLleUa7rrStdP1o5u7m9yt2W3U3cw9xX2r+00umxvJXcM970H08PdY4nHM452nm6fC85DnL152Xlle+70eT7OcJp7WMG3I28Rb4L3Le2A6Pj1l+s7pAz7GPgKfep+Hvqa+It89viN+1n6Zfgf8nvs7+sv9j/i/4XnyFvFOBWABwQHlAb2BGoGzA2sDHwSZBKUHNQWNBbsGLww+FUIMCQ1ZH3KTb8AX8hv5YzPcZyya0RXKCJ0VWhv6MMwmTB7WEY6GzwjfEH5vpvlM6cy2CIjgR2yIuB9pGZkX+X0UKSoyqi7qUbRTdHF09yzWrORZ+2e9jvGPqYy5O9tqtnJ2Z6xqbFJsY+ybuIC4qriBeIf4RfGXEnQTJAntieTE2MQ9ieNzAudsmjOc5JpUlnRjruXcorkX5unOy553PFk1WZB8OIWYEpeyP+WDIEJQLxhP5aduTR0T8oSbhU9FvqKNolGxt7hKPJLmnVaV9jjdO31D+miGT0Z1xjMJT1IreZEZkrkj801WRNberM/ZcdktOZSclJyjUg1plrQr1zC3KLdPZisrkw3keeZtyhuTh8r35CP5c/PbFWyFTNGjtFKuUA4WTC+oK3hbGFt4uEi9SFrUM99m/ur5IwuCFny9kLBQuLCz2Lh4WfHgIr9FuxYji1MXdy4xXVK6ZHhp8NJ9y2jLspb9UOJYUlXyannc8o5Sg9KlpUMrglc0lamUycturvRauWMVYZVkVe9ql9VbVn8qF5VfrHCsqK74sEa45uJXTl/VfPV5bdra3kq3yu3rSOuk626s91m/r0q9akHV0IbwDa0b8Y3lG19tSt50oXpq9Y7NtM3KzQM1YTXtW8y2rNvyoTaj9nqdf13LVv2tq7e+2Sba1r/dd3vzDoMdFTve75TsvLUreFdrvUV99W7S7oLdjxpiG7q/5n7duEd3T8Wej3ulewf2Re/ranRvbNyvv7+yCW1SNo0eSDpw5ZuAb9qb7Zp3tXBaKg7CQeXBJ9+mfHvjUOihzsPcw83fmX+39QjrSHkr0jq/dawto22gPaG97+iMo50dXh1Hvrf/fu8x42N1xzWPV56gnSg98fnkgpPjp2Snnp1OPz3Umdx590z8mWtdUV29Z0PPnj8XdO5Mt1/3yfPe549d8Lxw9CL3Ytslt0utPa49R35w/eFIr1tv62X3y+1XPK509E3rO9Hv03/6asDVc9f41y5dn3m978bsG7duJt0cuCW69fh29u0XdwruTNxdeo94r/y+2v3qB/oP6n+0/rFlwG3g+GDAYM/DWQ/vDgmHnv6U/9OH4dJHzEfVI0YjjY+dHx8bDRq98mTOk+GnsqcTz8p+Vv9563Or59/94vtLz1j82PAL+YvPv655qfNy76uprzrHI8cfvM55PfGm/K3O233vuO+638e9H5ko/ED+UPPR+mPHp9BP9z7nfP78L/eE8/sl0p8zAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAAM1klEQVR42uydf0gb5x/HH7+XuQ36x9Imazuxo+LFICS0SjIqbBFlnlaJhbkZtm50m13jcKxbt1IdbGU/7FrbTap4Ixl02LExEmgnaVWMtJUuMG2sXumUI4ktVq1zRoaFYZc23z8OgjNNPM39yN19Xn9dzntS7vrO83zen+fzPJcRjUYRAHDN/+ARACAsAIQFgLAAAIQFgLAAEBYAgLAAEBYAwgIAEBYAwgJAWAAAwgJAWAAICwBAWAAICwBhAQAICwBhASAsQDDcbrdWq1WpVE1NTSAsgBtCoZDNZiNJcm5urqCgQE63lgHrCkWkv7+fIIi5uTm1Wg1DIcAZBQUFarXaZrOFQiEQFsAZarW6t7d3YmJCp9M5nU4YCgGOaWpqOnHihJzGROix0oLm5mbGIcJQCHDjCp1O58LCgtPpVKvVNTU1ICyAAyYmJlpaWrRabUtLC0mScvKGEGMB0GMBICwAhAUAICwAhAWAsAAAhAWAsAAQFiAaPT091dXVU1NTICyAM9rb2+vq6tRqdWNjo5zuSwX/tWLx4MGDgwcPXrlyxefzbdy4EcfxkZGRHTt2yOPuYK5QHO7du/fyyy8jhFwu14YNGxBCJEm63e7+/n4YCoF1cvfu3dLS0tzcXI/Hw6gKIfTOO+9MTU1duHBBJjcZBYSFoqjt27e3tbXF/8nj8eTn50ciERncJghLULq7u7ds2dLd3Z3oAovF0tHRAcIC1kBbW1tWVtbvv/+e5Jrr169nZWUtLi5K/WYheBfUAHo8nm3btiW/+LXXXtu2bduxY8fAFQLJCAQCe/bsyc7OjhnA5ExNTe3cuZPpusAVAgkN4CuvvJKRkVFSUsJGVQihrKyst99+W+r5UhAWj/z2229FRUVvvfVWX1/f7OxsfX398PAwm4affPJJX1/fyMgIpBuAlZw6derJJ5/85ZdfmI8PHz4kSbKgoODo0aOjo6PJ246Ojr700ksWiwWCd+A/tLe3f/311zab7e+///7oo4/y8vKY8zdv3nS5XOfOncvPzzebzUajMTc3d/PmzQih2dnZQCBAUdTg4OAff/yxZ8+en376qbW1tbKyEoJ3YKUB/P77791u97vvvmu1WmPXTE9PDwwMDA4OUhQVCARmZ2cRQps3b87NzTUajWaz+YUXXnjmmWcuXLhw+PBhiqIwDANhKZr4GUCEUG9vb0dHh16v37t3r8FgWNMX7tq164033qivrwdhKdoAVlVV7dq1q7W1dUUfc/fu3c7Ozh9//LGiomL37t0Wi2XVb7ty5crFixfPnz+/uLhI0zRLRwnCkhs3btyorq7+8MMPGxoaEl0zPj7e1dV18eLFjIwMk8lkNBp1Ol12dvamTZsQQvPz85OTkzRNUxQ1NDQUjUZ3795ttVq/+OILKeZLQVgc0NPT8+abb545c6a8vHzVi+/fv+/z+YaGhiiKoml6cnJyfn4eIbRp06bs7GydTmc0Gk0mU1FRUWZmJpJuvhTyApzMAF67do2/f+LIkSOvv/46pBsUagB59QQ4jnd3d0uovhSExaUB5A/J1ZfClM46DWBxcfGKElBekV59KQRJHJaAssfr9eI4jmEYjuNer5dNE2nVl4KwOC4BZYlGo7Hb7eFwuLa2VqPRsGwlofpSEJYIBtDv92MYFgwGo9Goy+XCMIxlQwnVl0KMxdYAvvfeew6Hw+fzFRYWpvhtfr8fIZSTk8Nsa1taWsqy4Y4dOywWy1dffZX+TwwWrK7BAPp8Pm5Dda1WixDq7e1l3+TEiRM7d+5saGhI83wp9FhiGsBIJNLc3EwQxMLCAssmkqkvhciJbwMYj8PhWB5XYRjmcDjYN19cXNyyZcv169cheFe0AUwkrOPHj4fDYeaYCeTZ09HRUVJSAsKCGcBHCKusrAzDMI1G43K51voNkUgkLy/P4/GAsCRDJBJpaGgwGAy3b9/m6Z9YMRSujzTPl0LwvtIAVlVVBQIBn8/H37wyk7BgH7A/ksrKSq1W63A4YBJaAgYwUQloejIyMlJVVTU+Pp6G9aVy67GGh4fX1xPcuHGjqKho3759bW1tUlm8kNb5UplFSGu17nwbQL65c+eOVqu9c+cOBO/8qooBx/E0MYACkJ71pYrusQQwgAKQPF9qt9uZH5vJZPL7/eAKZWIABWDDhg2ffvrpoUOH4v9ks9n8fv/g4ODc3FxOTg5BEBBj8dtjzczMFBYWNjQ0yGNfxkT50uVPIxwOYxjGsqgQeqz1IEUDmBwMw06dOnX48OEHDx6s+FPsdcApps2U3mM1NjZiGFZbWys/A7gq8fWltbW1JpMpGAwGg8Ha2to1eRoI3tNlBlB04utLmdJnJngvKytb61R3Kigl8y7YGkBxSZ/9SxUhLIHXAIpI+qzHl3/wLvwaQBFJo/pSeQdVPJWASjdfCsE7B8jYACYnHepLZSsseRvA9eVLQVipPlYZzACmiOj1pXIL3mUzA5gioteXyirdILkSUF4Rt75UPj2W/GYAU0Tk+lIwgDJGxPpSOQhLyQZwVcSqL5V2jKWQGcAU3Ywo+5dKWFjKmQFMEVH2L5Vq8K6oGcAUEWf/UpgBhHwpBO9gANePwPuXSkxYYADXjcD7l0omeAcDmDpC1pdKQ1hgADlByPpSCbhCMIBcIWh9KRhARSFYfWlaCwsMIB8IU1+avsICA8gTwtSXovS8cygBlXq+NO2CdygBFYDKysqnnnqK1/rS9BIWGEBh+OGHH5aWlj7//PN79+7JX1hQAioAwWCQyTN/++23JSUlPNaXggFUDlevXq2urm5tbf3333+jPNeXpoWwwACuGxzHY3s2Jd9Xrb+/32KxnD9/PnZmZmamsrJy7969MhQWGMAU8Xq9GIb5/f5gMJjknTxXr161WCyXL1+Onenp6bFarQcPHnz66af5yJeKKazFxcXy8vLy8nJJvDI0bTGZTHa73eFwJNpXLRAIVFdXL++rnE4nQRC//vorf/lS0YQls11ARST2yqfjx48/8oL333+/tbU19vH06dN1dXXj4+OxQYOx4XIQ1rlz59jPAMY2lGa2gRRyWzpJwOxai2FYOByO/+uZM2f27dvHROtMX1VXV/fXX38xHx8+fEiSZH5+vl6v5/YXLoKwfv7558cff/zLL79kqSocx5ldNE0mU6LHp3A0Go3dbo8/HwqFnn/++YGBgVhcRRBErK+amZk5dOiQ3W73+/2c15cKLSzGAH7zzTdWq3VmZmbV65dvKL2mF74rLcxqbGyMP3/s2LEjR47EZGS1Wpm4ivl44MCBkydPMh85ry8VLkG6/EXwH3zwgV6v7+zsZNMwtqE0sCYmJyddLhdTIIkQ6uzs1Ov1VquVSV6ePHkSx/HYawe4X48vlgGkKMpgMIyNjSVvWFZWFttQGsdxGArZ89133x04cIA5HhsbMxgMFEUxH0mSjB86uc2XCtFjPXIG0GAwVFRUdHV1JW9LkiRCSKfTPffccx9//HFOTk5LSwv0Rmzo6+t78cUXmeOurq6KigqDwYAQunnzptPp3L9/P7/1pXz/bpKUgF6+fNlisSwtLUHvwjljY2N6vX5+fj4ajS4tLS3Pjn722WdHjx5NNLBwVV/Kr7BWnQEsLi6+dOkS6IBzzp49G5uruXTpUnFxMXM8NTVlNBpHR0cTNeQqX8rjUNje3l5XV+fxeMrLyxNdYzKZhoaGYNjio1SEGfgQQkNDQyaTiTkeGBjIz883Go2JGnK1Hp8XYS03gMyLtRNhNBopigIdcM74+Lher2eOKYqKKWlwcNBsNidpmOR9TyILa00loDqdjqZp0AHnTExMbN++nTmmaVqn08WLLEl9KQf7l4o7Azg9Pb1161YIiThHq9X++eefzPHWrVunp6eZ42efffbWrVurNk89X8qlsNaxBnBpaSkzMxN0wDmPPfbY/fv3mePMzMyY9X7iiSf++ecfNt/w6quvxrL2IguroqICxiA5EfOS60Apr5UDBGZtwfvw8DBBECqVSqVSmc1mgXcfBMSlqalJ9V9iniAlYYVCIYIgcnJyaJqmabqwsJAgiOHhYXjiCqG5uTkSiUQiEYQQSZKRSCSJo1/DUGiz2RYWFnp7e2NnCIJACC0/AygBlUpFkmT8bOM6e6z+/v6amprlZ2pqapQ8GtbX1zMhAUjtEeJjf+nCwgI8r+U/M6fTSdP0xMQEPI1Ug/d4FFuFV1BQoFar6+vroQ4xVWGVlpa63e7lZ9xud2lpqTIfnFqtpmlarVabzeZQKARKWgn7lJff78cwzG63M/WczOIZxa6ZCYfDXq+XWSaaZP2xLFm+EIGbzLvX62WWyjAL2fx+v2LnTLxer0ajYX5pSrt3Nr8lyLwDaRm8AwAICwBhASAsAABhASAsAIQFACAsQAj+PwBVbt9CYzz9dgAAAABJRU5ErkJggg=="/;
+ui_format_png->$el2627_0;
+$con2626_0={
+  1_:"Остроугольный треугольник OST",
+  2_:"$el2627_0"
+};
+
+"иллюстрация*"->$con2626_0;
+stype_sheaf->$con2626_0;
+$el2629={};
+$el2629=c=/"<i>OST</i> \ni <i>остроугольный треугольник</i> ; <i>O</i> , <i>S</i> , <i>T</i> \ni <i>геометрическая точка</i> ; < <i>OST</i> , <i>O</i> >, < <i>OST</i> , <i>S</i> >, < <i>OST</i> , <i>T</i> > \ni <i>вершина*</i> ; <i>o</i> , <i>s</i> , <i>t</i> \ni <i>отрезок</i> ; < <i>OST</i> , <i>o</i> >, < <i>OST</i> , <i>s</i> >, < <i>OST</i> , <i>t</i> > \ni <i>сторона*</i> ; <math>\alpha</math> , <math>\beta</math> , <math>\gamma</math> \ni <i>угол</i> ; <math>\alpha</math>, <math>\beta</math>, <math>\gamma</math> \ni <i>острый угол</i> ; < <i>OST</i> , <math>\alpha</math>>, < <i>OST</i> , <math>\beta</math>>, < <i>OST</i> , <math>\gamma</math>> \ni <i>внутренний угол*</i> ; < <i>s</i> , <i>O</i> >, < <i>t</i> , <i>O</i> >, < <i>o</i> , <i>S</i> >, < <i>t</i> , <i>S</i> >, < <i>o</i> , <i>T</i> >, < <i>s</i> , <i>T</i> > \ni <i>граничная точка*</i> ."/;
+"Русский язык","STRING"->$el2629;
+$el2630={};
+$el2630=c=/"<i>Треугольник OST</i> является остроугольным, разносторонним, Геометрические точки <i>O</i> , <i>S</i> и <i>T</i> являются вершинами Треугольника <i>OST</i> . Отрезки <i>o</i> , <i>s</i> и <i>t</i> являются сторонами Треугольника <i>OST</i> . Углы <math>\alpha</math>, <math>\beta</math>, <math>\gamma</math> являются внутренним углами Треугольника <i>OST</i> . Углы <math>\alpha</math>, <math>\beta</math>, <math>\gamma</math> острые углы. Точка <i>O</i> является граничной точкой отрезков <i>t</i> , <i>s</i> . Точка <i>S</i> является граничной точкой отрезков <i>t</i> , <i>o</i> . Точка <i>T</i> является граничной точкой отрезков <i>s</i> , <i>o</i> ."/;
+"Русский язык","STRING"->$el2630;
+$con2628={
+  $el2629,
+  $el2630
+};
+
+$con2628_1={
+  1_:"Факт.утв.(Остроугольный треугольник OST)",
+  2_:$con2628 
+};
+"трансляция*"->$con2628_1;
+stype_sheaf->$con2628_1;
+stype_sheaf->$con2628;

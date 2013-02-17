@@ -1,0 +1,112 @@
+$con336_0={
+  1_:"вписанность*",
+  2_:"Утв.(вписанность*)"
+};
+
+"утверждение определяющего типа*"->$con336_0;
+stype_sheaf->$con336_0;
+$el337={};
+"Русский язык","STRING"->$el337;
+$el337=c=/"вписанность*"/;
+$el338={};
+"Русский язык","STRING"->$el338;
+$el338=c=/"быть вписанным*"/;
+"синонимы(вписанность*)"={
+  "oсновной_":$el337,
+  $el338
+};
+"синонимы*"->"синонимы(вписанность*)";
+$con339={
+  1_:"синонимы(вписанность*)",
+  2_:"вписанность*" 
+};
+"идентификация*"->$con339;
+stype_sheaf->"синонимы(вписанность*)";
+stype_sheaf->$con339;
+"Предметная область Геометрии Евклида"={ "понятия Х-го логического уровня_": "вписанность*" };
+"отношение"->"вписанность*";
+"бинарное отношение"->"вписанность*";
+"ориентированное отношение"->"вписанность*";
+$con340_0={
+  1_:"вписанность*",
+  2_:"Опр.(вписанность*)"
+};
+
+"определение*"->$con340_0;
+stype_sheaf->$con340_0;
+$el342_0={};
+$el342_0=b64/"iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAAAAACIM/FCAAAACXBIWXMAAAsTAAALEwEAmpwYAAAABGdBTUEAALGOfPtRkwAAACBjSFJNAAB6JQAAgIMAAPn/AACA6QAAdTAAAOpgAAA6mAAAF2+SX8VGAAALxElEQVR42uyde1BTVxrAP2QJ7zKACAWR14hYoB2jLJILQQIqUSkuLLqIZobR+kBWR1rdus6utsrSpb62W7S+ypiyusUG66AyVkBAbqLy0BXYBizPKCIW0GJEdPHuHyBVhOTecx+h6f1mGBNzzs388n3nfI97zzkmBBiHmPAgPAgPwoPwIDwID8KD8CA8CA/Cg/AgPAgPwoPwIDwIDzIsT5pb29o7Ort6ftI+eQZmFtZv2DtOcnGd4uFl8YsBeXyztk7dYOsxxdVlkqP9G9YWZvDsifannq7Ojva21l5fP/+At63GOwhxtbKi2iHA38938hgtbjeo62q7hUGzgk3GLYi2rBwnZgUJffW2bKiuqDTBQsXW4xGktPDSxFAshHR7FV7+Y0RU+DgD0Zy/8CgqIohir4pLhTbzF7iPH5Cq/LOi+fPMEHo+++6CclHMzPEBguepYhYFInevOZsfEocZHuRq7vW4xZNpXeL2t3kzlgQbFqThRPGS37vQ/jk7vsmVLPM1HMhjec7CRE9GxmrLyXPLZVYGAinKdlweBExJRU5XcqQhQO4fK0tOYNQ5n8oWr3TiHKT48LRV7sCsaI7Wr5YgR0dI8jwrOo9gQfKis56j9UTTSNPnRMpUVqLxWwdMUr05M62yf0jWs5YhZRVvFHNkWrlR+QSLkh+V+8r7pkSBILpbXy8EkINJVQSrUpV08GUO55Qqoqib+TGSeecDd2BXNLvdtgy/WdZTQKbPBIrf0b+jdxfbHOC+q3dH//A8Hw8sgPTtNN9py35JxHan+c6+odc9wAJIf7rdVm6qO1vt0vtZnH53mHPEAQAZ/5oGCgCQAvNjJHOAOw6oJH6AeABIL17f3FPcwyTIF3e2cFk7tNdUAAAIC5r8XFIe6Gv9GwrBaXmGLWcULfJC88kP2wEAJBJmTavscJo7RxR98rkh3XjY1Kk2ZcyHKI1x+QQ3okpxilX0D0YrcY1MR7/E+z7ruVDGPbn86SqZ83AE2biHZGWVrGkdJDjgGDgbH9iQVb95mAPWEweZNa2i6AbWTapms1vE8d4R/9kQXUSuNzmQzqV5LFM8OIK5b6sfLWdc2sngGPmk7yNWbapIXhApk47+2XbLDxkzrUJpG4vKuLPLR7h/7J+9TVrIlGlpk3JZo3h8UuqyUXeilpukJXEhMrOW3DGBJZOq3uAhl7XuF+pslOAoZ8a06rFrrCijc7/Qd9cdEg2vYfWMaOTEwiAWlFEQ71e9r36bK4mmQQtPMKGRK2HNjCujfpu7+MgD0s2bw67obaM/+s1d4smsLh79+6vGFYVUbiJ4LskNpq2R8oi7jCqjdJVTXP7/KHa6G1FOWyN5cS7MKaM9W26Z/DfqFXeXuDyMpkYqQzRM6aJfEeuUokLrqwmppKmR/JjJDLkM+ddvJ5+0ROw9OSZ/Ji2NtM28yYQyug4EeX5Ea/K7ObONlh85LwpkwGUk+l3JaP4rrckvUHSeVmJ1YT7tKsL2KR+L1ccj6V5n/gU6IKWP5tFzGfK5oX3nVesc6Kt13qNSGuWgwigzGt995Vhe2LpYU2YmC7OownBkEO2lfXSqCCD7rzNzPihik9Ya1bTKJiKGiwNnFr/VcKRmM4McEDSxDFkj5aFIX1krPzF9RY4N0/FyaLkUUSMEjvDQzsODIQssyy/KGOcADCcQHaJKTNlvFcqc/nCerbRYrEIMUSpnUS08Zzsl73MAtmRW5Wy0MVIhpVJ4PiO/vlQhZLNoFFSAZlragHrSWn+p8Mye1AdokUzrpgPJLO7+iew+2Q1XYFt8HW7ORjGt2gBSLqMg+3LsZ2LgQgJqkUDq/PVfuiH7K58Vx22AG/GvQ/Ijaj99LuNoeJRpcekqrjjAT40y2Pu8dSe5pTIHSjexqqIFgtlFtEa7xrsPIbFqttWR5LanT9skVCsWkf81mxd4q9VCaTUdjUy2bUbQSMG7Y1YRTkqdUqg+IZQYTRAEER1NSyXvFiBMv21TxqwizJApKFcRincBAMTTu4E3pQ1h1mp3HdVlyLtXVaG4jB4mRrtrOwJIx2tVyt5yeZE0k172bU+rt8tVhOm3c9IIl5H65seRt5CrCBIFAIBCQgtkUifCYH8laO49HuG2ec4FOs/3CVKamlIETfSeJRAjTL89P1tB2XveZ9JaM8V05k5hQbWfX5PKi55h9pDWyBHBkaFXHu2D/3ZkTg/I7CAIgvh6OWFgafcgrREFKF6UUKwB4Gne4sCWL4eqCD6NYGCx1pLVSLcgWjD4ZOps82CiJs0l6vjj4Q873BFTVLGYIY3025DViAI2D6okBIgf7WPsVBdllqQsVIeED/0xUaV7Rnb6LfaS2BcPvb5rfmCjJ/xSZKRGIocmfAATD/O9b/52y5n7o81jBpJnZiRBjsJRcwUUA4AKJti0XnyQaXdoauCGU4ORwW20ez6lQ38MyBMLkoM9xZkgugUpr0y/RHlmrJNvck7z+J5+XwUR/JkgiBQBQRAEEah+6YMb+xPcPKXr6w0Mog5EeMwp/O8jMv2GS5fxZyJszjuGGyNX/lRKPfp17BpZjfFdAy140YEeESbCDAPS5YgQxo8aaXp6JkE7fnmtRoRhIgHnICMjclIgLh1jZTcJCXBfiW+pxUSYyIZTkA4XBBDXGh1XdIqNhYdK/BM8KAwTOXAG0h6IADLlnJ6r2kml0KfE/5noE4lhzpyAtC1EAPFoJXFly8hIGMCV2e85i+dg7D9x3uox5kdjT79P/EspePKKy7jSGpsj9mGT43Z4nQV1jVj4NlAACQpKg++LvtsOGBY5nS2QBl8LlCK2n5pipWD69FRoLCvZrxVhYWw8PaizGq0DxP86wnf5+CSDBi85ek+EiTBThkHqZgDCGNEVD+iXezhe1CjCMJElgyCvRU3kQB4HK+jtXtCtxC9XYCJMZMfQEIm/aoViWlbCanogDosWwSMlvjc+YA4mcqIPUi20QjIt+Lx5DyO/5FMljivdI8IwmrcZ3/dKRQOhNUhGCq7ElfZYJObJzhDRCUJEZIQwOuv8pwRXmmFhEWgWq9p6yQQNBLbZf8C8U0NOz3b3pAMiSMGhb1nx0C14EU49PVu8RooKop2/jxUPDQDQjl++RCk9q9h0wRoVBP5iy+qi1vtKvIR0epbZu1Pn5zqrFiVzn7JdGHlwfluEAPswv0tPu6dzS+gsFotbuZCDfKlPieNKPenZuWN5Oq+hB+RQ3WccZbEDuBJX6kjPNvivoQOi+V12IHAnY6dnNcmn3emAcLqnwKB8X4Tjr6dnGf079PTjbtkFBfnhS5mPS9yeaxSWXehdGaozUmNTNHhJ2VB6FgKdi/cAAFQv6AFhugRFI4wvTaIkHYq0d2zmebw1wyFg6FYt0Z3ojLZ8D5vxDRhMnOP23Gj94/O7Gqthl2kvGf0GoP51iEtyW8CQ4rDIzXPg53tlzWM8PKF/+V6w5ORWg5KAysvWWjX02hxAjagRWHauwrAgFW4XX3BAv1qyDBXEd3mOYUFylr+UiXnFV6OCgKzrlCE5TnXJXnrXPMbT3mRArJKzNYbj0GQnDxdPvMHcD7KQQpRBYXurBF1CcqsEctuJrKw/bSiO0/UrgTkQp9WHbxmG49bh1U4MgoAk5oBhQA7EkLwlQHanmnUmWYbgyDJZB8yCmKQWn+We42xxKulN2cmvqI+q4jr4rYoqJd2WwoaTuUlt3HK0UdmPhcLWbQmhu3u5tKve3aEU9mOhsgfdWrdMLkEy3dYCOyCwxTSDO44MU0pVTmobTm7VfsoVx6daalkQxU1Z+9KtucmyMrTbLNkEgf6MgS3sb3LYm2m61RxYBeF+m1zWQOCL8jRWV7JC9d7QtdR7ITgqjreSJidGs7m30Wy3/ivfAB/G35EE/CERYDTHdoDxHKQCRnO0DYDRHDYEYDTHPwEYzYFcAEZzRBoAGMuhdQBgNMcIDkZuRnGw4ws3aQxHbQ6LMRx+ahjhQXgQHoQH4UF4EB6EB+FBeJBfD8gE4DXCg/AgPAgPwoPwIMYD8v8BAI7ZicXElepHAAAAAElFTkSuQmCC"/;
+ui_format_png->$el342_0;
+$con341_0={
+  1_:"вписанность*",
+  2_:"$el342_0"
+};
+
+"иллюстрация*"->$con341_0;
+stype_sheaf->$con341_0;
+$set344={};
+
+$set344->"геометрическая фигура_";
+$set344->"окружность_";
+$con343={
+  1_:"вписанность*",
+  2_:$set344
+};
+
+"схема отношения*"->$con343;
+stype_sheaf->$con343;
+stype_sheaf->$set344;
+$con345_0={
+  1_:"вписанность*",
+  2_:"геометрическая фигура ограниченного размера"
+};
+
+"домен*"->$con345_0;
+stype_sheaf->$con345_0;
+$con346_0={
+  1_:"вписанность*",
+  2_:"геометрическая фигура ограниченного размера"
+};
+
+"область определения*"->$con346_0;
+stype_sheaf->$con346_0;
+$el348={};
+$el348=c=/"Геометрическая фигура является вписанной, тогда и только тогда, когда все вершины данной геометрической фигуры, принадлежат данной окружности."/;
+"Русский язык","STRING"->$el348;
+$con347={
+  $el348
+};
+
+$con347_1={
+  1_:"Опр.(вписанность*)",
+  2_:$con347 
+};
+"трансляция*"->$con347_1;
+stype_sheaf->$con347_1;
+stype_sheaf->$con347;
+$set350={};
+$set350->"геометрическая фигура";
+$set350->"окружность";
+$set350->"вершина*";
+$con349={
+  1_:"Опр.(вписанность*)",
+  2_:$set350
+};
+
+"используемые константы*"->$con349;
+stype_sheaf->$con349;
+stype_sheaf->$set350;
+$el352={};
+$el352=c=/"Геометрическая фигура, все вершины которой принадлежат окружности, называется вписанной в окружность."/;
+"Русский язык","STRING"->$el352;
+$con351={
+  $el352
+};
+
+$con351_1={
+  1_:"Утв.(вписанность*)",
+  2_:$con351 
+};
+"трансляция*"->$con351_1;
+stype_sheaf->$con351_1;
+stype_sheaf->$con351;

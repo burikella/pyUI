@@ -1,0 +1,43 @@
+$el32={};
+"Русский язык","STRING"->$el32;
+$el32=c=/"Акс.(прямая; геометрическая точка)"/;
+$el33={};
+"Русский язык","STRING"->$el33;
+$el33=c=/"Аксиома о принадлежности точек прямой"/;
+"синонимы(Акс.(прямая; геометрическая точка))"={
+  "oсновной_":$el32,
+  $el33
+};
+"синонимы*"->"синонимы(Акс.(прямая; геометрическая точка))";
+$con34={
+  1_:"синонимы(Акс.(прямая; геометрическая точка))",
+  2_:"Акс.(прямая; геометрическая точка)" 
+};
+"идентификация*"->$con34;
+stype_sheaf->"синонимы(Акс.(прямая; геометрическая точка))";
+stype_sheaf->$con34;
+"Предметная область Геометрии Евклида"={ "утверждения 0-го логического уровня_": "Акс.(прямая; геометрическая точка)" };
+$el36={};
+$el36=c=/"Существуют точки, принадлежащие и не принадлежащие прямой."/;
+"Русский язык","STRING"->$el36;
+$con35={
+  $el36
+};
+
+$con35_1={
+  1_:"Акс.(прямая; геометрическая точка)",
+  2_:$con35 
+};
+"трансляция*"->$con35_1;
+stype_sheaf->$con35_1;
+stype_sheaf->$con35;
+$el38_0={};
+$el38_0=b64/"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"/;
+ui_format_png->$el38_0;
+$con37_0={
+  1_:"Акс.(прямая; геометрическая точка)",
+  2_:"$el38_0"
+};
+
+"иллюстрация*"->$con37_0;
+stype_sheaf->$con37_0;

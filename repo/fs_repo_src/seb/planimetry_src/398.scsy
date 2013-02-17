@@ -1,0 +1,109 @@
+$set4507={};
+
+$set4507->"граничная точка*";
+$set4507->"длина*";
+$con4506={
+  1_:"сложная ломаная",
+  2_:$set4507
+};
+
+"отношения, области определения которых являются надмножеством описываемого множества и связки которых, в общем случае, связывают элементы описываемого множества с другими объектами*"->$con4506;
+stype_sheaf->$con4506;
+stype_sheaf->$set4507;
+$set4509={};
+
+$set4509->"совпадение*";
+$set4509->"включение множества*";
+$set4509->"объединение множеств*";
+$set4509->"пересечение множеств*";
+$set4509->"разность множеств*";
+$set4509->"разбиение множества*";
+$con4508={
+  1_:"сложная ломаная",
+  2_:$set4509
+};
+
+"отношения, области определения которых строго пересекаются с описываемым множеством*"->$con4508;
+stype_sheaf->$con4508;
+stype_sheaf->$set4509;
+$el4510={};
+"Русский язык","STRING"->$el4510;
+$el4510=c=/"сложная ломаная"/;
+$el4511={};
+"Русский язык","STRING"->$el4511;
+$el4511=c=/"Класс сложных ломаных"/;
+$el4512={};
+"Русский язык","STRING"->$el4512;
+$el4512=c=/"Понятие сложной ломаной"/;
+$el4513={};
+"Русский язык","STRING"->$el4513;
+$el4513=c=/"Множество сложных ломанных"/;
+$el4514={};
+"Русский язык","STRING"->$el4514;
+$el4514=c=/"Множество всевозможных сложных ломаных"/;
+"синонимы(сложная ломаная)"={
+  "oсновной_":$el4510,
+  $el4511,
+  $el4512,
+  $el4513,
+  $el4514
+};
+"синонимы*"->"синонимы(сложная ломаная)";
+$con4515={
+  1_:"синонимы(сложная ломаная)",
+  2_:"сложная ломаная" 
+};
+"идентификация*"->$con4515;
+stype_sheaf->"синонимы(сложная ломаная)";
+stype_sheaf->$con4515;
+"Предметная область Геометрии Евклида"={ "понятия 4-го логического уровня_": "сложная ломаная" };
+$con4516={
+  "подмножество_":"сложная ломаная",
+  "надмножество_":"ломаная"
+};
+
+"строгое включение*"->$con4516;
+stype_sheaf->$con4516;
+$el4518_0={};
+$el4518_0=b64/"iVBORw0KGgoAAAANSUhEUgAAAOEAAACKCAIAAADT4rq0AAAABGdBTUEAALGPC/xhBQAAFa1JREFUeF7t3Xm0VtP/B/CvtMqwEGtZKGWRJDJlJmRM/DJFIkP9KhQlJPNQJEPIFEmGDCVTKkOIUiHJ3C8yz2We5+H34vg+3e70PPeZn+fs80frdu8+e5/z2e/z2Z/5s9Rff/31n3hcn3322S+//NKkSZOllloqeuM//vjjgw8+WHXVVZdffvl40KA03xJGY3INHTp01113femllxLv+9VXX+22226PP/54TChQoq/5nxJ97jQe+/TTT1922WV79uz5xRdfRLf7YeONN37wwQfTmC3ckjcKxAujO+yww9Zbb33ttdf++eefAaN5A1mGC8ULowceeOA111yzySabvPHGGwGjGUInb7fHC6OHHHIIGfR//7k+//zzcNbnDWeZLBQ7jDrl33rrrY022uiiiy766KOPgjyaCXryc28cMYqyRNLNN9/84YcfDhjND84yWaV8MPr77787uxlB/VAtRej1zvpIW3LQ9+jRo23btuuvv37Q6zMBUB7uLROM/vjjj+PHj+/SpUunTp1uuOEG/61Ku4oY9VeGUsoTA37AaB5wlskSZYLRadOmNW7cOHIgNWrUaPLkyVWJcsUVV5xyyikRH3X54cYbb2TVnzFjRiYUDPfmmgJlglHgS7j5IJWhPoHFXFMwzJ9rCpQJRvHIhBfeD+ecc06uCRfmzxsFygSjb7/99j777NOgQYP69esTMZ977rm8UTAslGsKlAlGI1W9Q4cOXJ077bTTwQcf/Nprr4XjPtfoyc/85YNR9Bo+fHjHjh0xUf/uscceL7zwQn6IGFbJKQXKCqORA+npp5/+9NNPjz322A022OCJJ5749ddfc0rBMHmuKVBWGP3hhx+Y5ceMGeOUd/QPGTKkdevWt912208//ZRrOob5c0eBssIolnnSSSf17dsXWJHMv8OGDWvZsuXVV1/922+/5Y6IYeacUqCsMIpS999//1ZbbfXJJ59EVOMXnThx4mabbTZw4MCFCxfmlJRh8hxRoNwwysPZpk0bImmCXpKWZINss802Rx555KJFi3JExzBt7ihQbhj99ttvDz300MGDB1ckGfF07ty5lP299957/vz5NQWd5I7KYeZMKFBuGEWLSy+9dPfdd6+qzr///vuHH364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"/;
+ui_format_png->$el4518_0;
+$con4517_0={
+  1_:"сложная ломаная",
+  2_:"$el4518_0"
+};
+
+"иллюстрация*"->$con4517_0;
+stype_sheaf->$con4517_0;
+$con4519_0={
+  1_:"сложная ломаная",
+  2_:"Опр.(сложная ломаная)"
+};
+
+"определение*"->$con4519_0;
+stype_sheaf->$con4519_0;
+$el4521={};
+$el4521=c=/"Ломаная с самопересечениями."/;
+"Русский язык","STRING"->$el4521;
+$con4520={
+  $el4521
+};
+
+$con4520_1={
+  1_:"Опр.(сложная ломаная)",
+  2_:$con4520 
+};
+"трансляция*"->$con4520_1;
+stype_sheaf->$con4520_1;
+stype_sheaf->$con4520;
+$set4523={};
+$set4523->"ломаная";
+$set4523->"отрезок";
+$set4523->"пересекающиеся множества*";
+$con4522={
+  1_:"Опр.(сложная ломаная)",
+  2_:$set4523
+};
+
+"используемые константы*"->$con4522;
+stype_sheaf->$con4522;
+stype_sheaf->$set4523;
