@@ -710,6 +710,7 @@
 #include "planimetry_src\97.scsy"
 #include "planimetry_src\98.scsy"
 #include "planimetry_src\99.scsy"
+planimetry_src\extend.gwf
 #include "planimetry_src\keywords.scsy"
 #include "planimetry_src\keywords_types.scsy"
 
